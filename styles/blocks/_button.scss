@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.button {
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-md);
+    padding: rem(12) rem(24);
+
+    font-family: var(--font-family-accent);
+    font-size: rem(22);
+    font-weight: 600;
+    color: var(--color-light);
+
+    &:hover {
+        outline: rem(1) solid var(--color-accent);
+        background-color: transparent;
+        color: var(--color-accent);
+    }
+}

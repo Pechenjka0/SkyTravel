@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .header {
+    width: 100%;
+
     font-family: var(--font-family-accent);
     font-size: rem(18);
     font-weight: 600;
@@ -11,7 +13,7 @@
 
     background-color: transparent;
 
-    padding: rem(24) 0 rem(24);
+    padding-block: rem(24);
 
     &--light {
         background-color: var(--color-light);

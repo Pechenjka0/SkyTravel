@@ -244,6 +244,9 @@ svg * {
   --color-europe-bg: #DBEAFE;
   --color-asia-text: #166534;
   --color-asia-bg: #DCFCE7;
+  --border-radius-lg: 1.25rem;
+  --border-radius-md: 0.9375rem;
+  --border-radius-sm: 0.625rem;
   --font-family-base: "Open Sans", sans-serif;
   --font-family-accent: "Montserrat", sans-serif;
   --container-width: 62.5rem;
@@ -349,7 +352,33 @@ a[class] {
   transition-duration: 0s !important;
 }
 
+.hero {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-block: auto;
+}
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 45rem;
+  background: linear-gradient(270deg, rgba(246, 246, 246, 0) 0%, rgba(246, 246, 246, 0.65) 100%), url("./../../images/hero/hero-bg.jpg") center/cover no-repeat;
+}
+.hero__main {
+  max-width: 37.1875rem;
+  margin-right: auto;
+}
+.hero__title {
+  margin-bottom: 1rem;
+}
+.hero__description {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
 .header {
+  width: 100%;
   font-family: var(--font-family-accent);
   font-size: 1.125rem;
   font-weight: 600;
@@ -357,7 +386,7 @@ a[class] {
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  padding: 1.5rem 0 1.5rem;
+  padding-block: 1.5rem;
 }
 .header--light {
   background-color: var(--color-light);
@@ -370,6 +399,21 @@ a[class] {
   color: var(--color-primary);
 }
 .header__menu-link.is-active {
+  color: var(--color-accent);
+}
+
+.button {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-family-accent);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--color-light);
+}
+.button:hover {
+  outline: 0.0625rem solid var(--color-accent);
+  background-color: transparent;
   color: var(--color-accent);
 }
 
