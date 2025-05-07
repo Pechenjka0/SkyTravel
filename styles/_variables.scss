@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #FFFFFF;
+
+    --color-primary: #1F1F1F;
+    --color-body-text: #4A4A4A;
+
+    --color-accent: #8A2BE2;
+
+    --color-section-bg: #F9FAFB;
+    --color-footer-bg: #111827;
+    --color-cta-bg: #F3E9FC;
+
+    --color-gray: #E2E2E2;
+    --color-gray-10: #D1D5DB;
+    --color-gray-20: #BDBDBD;
+    --color-gray-30: #707280;
+
+    --color-placeholder: #4A4A4A70; 
+
+    --color-europe-text: #1E40AF;
+    --color-europe-bg: #DBEAFE;
+
+    --color-asia-text: #166534;
+    --color-asia-bg: #DCFCE7;
+
+    --font-family-base: 'Open Sans', sans-serif;
+    --font-family-accent: 'Montserrat', sans-serif;
+
+    --container-width: #{rem(1000)};
+    --container-padding-x: #{rem(16)};
+
+    --transition-duration: 0.2s;
+}
