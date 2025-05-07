@@ -227,5 +227,126 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
+:root {
+  --color-light: #FFFFFF;
+  --color-primary: #1F1F1F;
+  --color-body-text: #4A4A4A;
+  --color-accent: #8A2BE2;
+  --color-section-bg: #F9FAFB;
+  --color-footer-bg: #111827;
+  --color-cta-bg: #F3E9FC;
+  --color-gray: #E2E2E2;
+  --color-gray-10: #D1D5DB;
+  --color-gray-20: #BDBDBD;
+  --color-gray-30: #707280;
+  --color-placeholder: #4A4A4A70;
+  --color-europe-text: #1E40AF;
+  --color-europe-bg: #DBEAFE;
+  --color-asia-text: #166534;
+  --color-asia-bg: #DCFCE7;
+  --font-family-base: "Open Sans", sans-serif;
+  --font-family-accent: "Montserrat", sans-serif;
+  --container-width: 62.5rem;
+  --container-padding-x: 1rem;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 48.06125rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 48.06125rem) {
+  .visually-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  color: var(--color-body-text);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--font-family-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+h2, .h2 {
+  font-size: 2.25rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.375rem;
+}
+
+h5, .h5,
+h6, .h6 {
+  font-size: 1.125rem;
+}
+
+a, button,
+label, input,
+textarea, select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-accent);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 0.125rem dashed var(--color-light);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
+}
 
 /*# sourceMappingURL=main.css.map */

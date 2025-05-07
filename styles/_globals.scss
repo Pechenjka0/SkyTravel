@@ -1,1 +1,64 @@
 @use 'helpers' as *;
+
+body {
+    font-family: var(--font-family-base);
+    font-size: rem(16);
+    color: var(--color-body-text);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: var(--font-family-accent);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+h1, .h1 {
+    font-size: rem(64);
+    font-weight: 700;
+    line-height: 0.9;
+}
+
+h2, .h2 {
+    font-size: rem(36);
+}
+
+h3, .h3 {
+    font-size: rem(28);
+}
+
+h4, .h4 {
+    font-size: rem(22);
+}
+
+h5, .h5,
+h6, .h6 {
+    font-size: rem(18);
+}
+
+a, button,
+label, input,
+textarea, select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+:focus-visible {
+    outline: rem(2) dashed var(--color-light);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}
