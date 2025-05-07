@@ -349,4 +349,28 @@ a[class] {
   transition-duration: 0s !important;
 }
 
+.header {
+  font-family: var(--font-family-accent);
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 1.5rem 0 1.5rem;
+}
+.header--light {
+  background-color: var(--color-light);
+}
+.header__menu-list {
+  display: flex;
+  column-gap: 1.875rem;
+}
+.header__menu-link {
+  color: var(--color-primary);
+}
+.header__menu-link.is-active {
+  color: var(--color-accent);
+}
+
 /*# sourceMappingURL=main.css.map */
