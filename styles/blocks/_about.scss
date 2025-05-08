@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.about {
+    padding-block: rem(50);
+    background-color: var(--color-section-bg);
+
+    &__inner {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(20);
+    }
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__description {
+        p:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+    }
+
+    &__img {
+        border-radius: var(--border-radius-lg);
+    }
+}

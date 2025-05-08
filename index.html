@@ -10,42 +10,63 @@
 </head>
 
 <body>
+    <main>
 
-    <div class="hero-wrapper">
 
-        <header class="header container">
-            <a href="/" class="heder__logo logo">
-                <img width="156" height="32" src="./images/logo.svg" alt="SkyTravel логотип">
-            </a>
+        <div class="hero-wrapper">
 
-            <nav class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a href="./index.html" class="header__menu-link is-active">Главная</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="./destinations.html" class="header__menu-link">Направления</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="./services.html" class="header__menu-link">Услуги</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="./contacts.html" class="header__menu-link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="hero container">
-            <div class="hero__main">
-                <h1 class="hero__title">Открывайте мир вместе с нами!</h1>
-                <div class="hero__description">
-                    <p>Мы поможем вам организовать путешествие мечты</p>
+            <header class="header container">
+                <a href="/" class="heder__logo logo">
+                    <img width="156" height="32" src="./images/logo.svg" alt="SkyTravel логотип">
+                </a>
+
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="./index.html" class="header__menu-link is-active">Главная</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./destinations.html" class="header__menu-link">Направления</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./services.html" class="header__menu-link">Услуги</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./contacts.html" class="header__menu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="hero container" aria-labelledby="hero-title">
+                <div class="hero__main">
+                    <h1 id="hero-title" class="hero__title">Открывайте мир вместе с нами!</h1>
+                    <div class="hero__description">
+                        <p>Мы поможем вам организовать путешествие мечты</p>
+                    </div>
+                    <a href="./destinations.html" class="hero__button button">Найти тур</a>
                 </div>
-                <a href="./destinations.html" class="hero__button button">Найти тур</a>
+            </section>
+        </div>
+
+        <section class="about" aria-labelledby="about-title">
+            <div class="about__inner container">
+                <div class="about__content">
+                    <h2 id="about-title" class="about__title">О нас</h2>
+                    <div class="about__description">
+                        <p>SkyTravel — это туристическая компания, которая уже более 10 лет помогает людям открывать мир. Мы предлагаем индивидуальный подход к каждому клиенту и организуем путешествия под любой запрос — от пляжного отдыха до культурных или гастрономических туров.</p>
+                        <p>Мы не продаём шаблонные туры — мы подбираем маршруты, которые соответствуют вашему стилю, бюджету и интересам. Берём на себя всё: билеты, отели, визы, трансферы и поддержку 24/7. С нами отдых — это просто, безопасно и приятно.</p>
+                    </div>
+                </div>
+                <div class="about__media">
+                    <img 
+                        width="490" height="348" 
+                        src="./images/about/about-1.jpg" alt="" 
+                        class="about__img">
+                </div>
             </div>
         </section>
-    </div>
 
+    </main>
 </body>
 
 </html>
