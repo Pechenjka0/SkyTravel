@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.advantages {
+    padding-block: rem(100);
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(64);
+    }
+
+    &__list {
+        display: grid;
+        column-gap: rem(20);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        &-icon {
+            margin-bottom: rem(24);
+        }
+
+        &-title {
+            margin-bottom: rem(16);
+        }
+    }
+}
