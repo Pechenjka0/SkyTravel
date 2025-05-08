@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .advantages {
-    padding-block: rem(100);
+    padding-block: var(--section-padding-y);
 
     &__title {
         text-align: center;

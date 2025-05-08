@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.popular-destinations {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-section-bg);
+
+    &__title,
+    &__description {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__list {
+        display: grid;
+        gap: rem(20);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "greece greece france"
+            "italy china france";
+
+            .greece { grid-area: greece; }
+            .france { grid-area: france; }
+            .italy { grid-area: italy; }
+            .china { grid-area: china; }
+
+            margin-block: rem(48);
+    }
+
+    &__button {
+        &-wrapper {
+            text-align: center;
+        }
+    }
+}
+

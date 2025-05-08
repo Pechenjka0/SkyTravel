@@ -13,7 +13,7 @@
     <main>
 
 
-        <div class="hero-wrapper">
+        <div class="hero-wrapper visually-hidden">
 
             <header class="header container">
                 <a href="/" class="heder__logo logo">
@@ -48,56 +48,129 @@
             </section>
         </div>
 
-        <section class="about" aria-labelledby="about-title">
+        <section class="about visually-hidden" aria-labelledby="about-title">
             <div class="about__inner container">
                 <div class="about__content">
                     <h2 id="about-title" class="about__title">О нас</h2>
                     <div class="about__description">
-                        <p>SkyTravel — это туристическая компания, которая уже более 10 лет помогает людям открывать мир. Мы предлагаем индивидуальный подход к каждому клиенту и организуем путешествия под любой запрос — от пляжного отдыха до культурных или гастрономических туров.</p>
-                        <p>Мы не продаём шаблонные туры — мы подбираем маршруты, которые соответствуют вашему стилю, бюджету и интересам. Берём на себя всё: билеты, отели, визы, трансферы и поддержку 24/7. С нами отдых — это просто, безопасно и приятно.</p>
+                        <p>SkyTravel — это туристическая компания, которая уже более 10 лет помогает людям открывать
+                            мир. Мы предлагаем индивидуальный подход к каждому клиенту и организуем путешествия под
+                            любой запрос — от пляжного отдыха до культурных или гастрономических туров.</p>
+                        <p>Мы не продаём шаблонные туры — мы подбираем маршруты, которые соответствуют вашему стилю,
+                            бюджету и интересам. Берём на себя всё: билеты, отели, визы, трансферы и поддержку 24/7. С
+                            нами отдых — это просто, безопасно и приятно.</p>
                     </div>
                 </div>
                 <div class="about__media">
-                    <img 
-                        width="490" height="348" 
-                        src="./images/about/about-1.jpg" alt="" 
-                        class="about__img">
+                    <img width="490" height="348" src="./images/about/about-1.jpg" alt="" class="about__img">
                 </div>
             </div>
         </section>
 
-        <section class="advantages" aria-labelledby="advantages-title">
+        <section class="advantages visually-hidden" aria-labelledby="advantages-title">
             <div class="advantages__inner container">
                 <h3 id="advantages-title" class="advantages__title h2">Почему выбирают нас</h3>
                 <ul class="advantages__list">
                     <li class="advantages__item">
-                        <img
-                            width="69" height="69" 
-                            src="./icons/advantages/icon-1.svg" alt="" class="advantages__item-icon">
-                            <h3 class="advantages__item-title h4">Персонализированный подход</h3>
-                            <div class="advantages__item-description">
-                                <p>подбираем маршрут с учётом ваших интересов и бюджета.</p>
-                            </div>
+                        <img width="69" height="69" src="./icons/advantages/icon-1.svg" alt=""
+                            class="advantages__item-icon">
+                        <h3 class="advantages__item-title h4">Персонализированный подход</h3>
+                        <div class="advantages__item-description">
+                            <p>подбираем маршрут с учётом ваших интересов и бюджета.</p>
+                        </div>
                     </li>
                     <li class="advantages__item">
-                        <img
-                            width="69" height="69" 
-                            src="./icons/advantages/icon-2.svg" alt="" class="advantages__item-icon">
-                            <h3 class="advantages__item-title h4">Поддержка 24/7</h3>
-                            <div class="advantages__item-description">
-                                <p>всегда на связи для решения любых вопросов.</p>
-                            </div>
+                        <img width="69" height="69" src="./icons/advantages/icon-2.svg" alt=""
+                            class="advantages__item-icon">
+                        <h3 class="advantages__item-title h4">Поддержка 24/7</h3>
+                        <div class="advantages__item-description">
+                            <p>всегда на связи для решения любых вопросов.</p>
+                        </div>
                     </li>
                     <li class="advantages__item">
-                        <img
-                            width="69" height="69" 
-                            src="./icons/advantages/icon-3.svg" alt="" class="advantages__item-icon">
-                            <h3 class="advantages__item-title h4">Гарантия лучших цен</h3>
-                            <div class="advantages__item-description">
-                                <p>лучшие цены и сервис от проверенных поставщиков.</p>
-                            </div>
+                        <img width="69" height="69" src="./icons/advantages/icon-3.svg" alt=""
+                            class="advantages__item-icon">
+                        <h3 class="advantages__item-title h4">Гарантия лучших цен</h3>
+                        <div class="advantages__item-description">
+                            <p>лучшие цены и сервис от проверенных поставщиков.</p>
+                        </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="popular-destinations" aria-labelledby="popular-destinations-title">
+            <div class="popular-destinations__inner container">
+                <h2 id="popular-destinations-title" class="popular-destinations__title">Популярные направления</h2>
+                <div class="popular-destinations__description">
+                    <p>Откройте для себя самые востребованные туристические страны — яркие впечатления, комфорт и
+                        незабываемые маршруты ждут вас.</p>
+                </div>
+
+                <ul class="popular-destinations__list">
+                    <li class="popular-destinations__item greece">
+                        <article class="destination-card destination-card--popular">
+                            <a href="#!" class="destination-card__link">
+                                <img width="659" height="268" src="./images/popular-destination/1.jpg"
+                                alt="Направление Греция" class="destination-card__img">
+                            </a>
+                            <div class="destination-card__content">
+                                <h3 class="destination-card__title h4">Греция</h3>
+                                <div class="destination-card__description">
+                                    <p>Белоснежные острова, мифические достопримечательности и теплое Эгейское море.
+                                        Ощутите дух древней истории в каждой детали.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="popular-destinations__item france">
+                        <article class="destination-card destination-card--popular">
+                            <a href="#!" class="destination-card__link">
+                                <img width="320" height="569" src="./images/popular-destination/2.jpg"
+                                alt="Направление Франция" class="destination-card__img">
+                            </a>
+                            <div class="destination-card__content">
+                                <h3 class="destination-card__title h4">Франция</h3>
+                                <div class="destination-card__description">
+                                    <p>Элегантность и романтика в каждом уголке. Прогуляйтесь по Парижу, исследуйте замки Луары.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="popular-destinations__item italy">
+                        <article class="destination-card destination-card--popular">
+                            <a href="#!" class="destination-card__link">
+                                <img width="320" height="168" src="./images/popular-destination/3.jpg"
+                                alt="Направление Италия" class="destination-card__img">
+                            </a>
+                            <div class="destination-card__content">
+                                <h3 class="destination-card__title h4">Италия</h3>
+                                <div class="destination-card__description">
+                                    <p>Исторические города, романтические пейзажи и лучшие в мире паста и пицца.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="popular-destinations__item china">
+                        <article class="destination-card destination-card--popular">
+                            <a href="#!" class="destination-card__link">
+                                <img width="320" height="168" src="./images/popular-destination/4.jpg"
+                                alt="Направление Китай" class="destination-card__img">
+                            </a>
+                            <div class="destination-card__content">
+                                <h3 class="destination-card__title h4">Китай</h3>
+                                <div class="destination-card__description">
+                                    <p>Страна контрастов с тысячелетней историей. Исследуйте Великую Китайскую стену и древние храмы.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    
+                </ul>
+                <div class="popular-destinations__button-wrapper">
+                    <a href="./destinations.html" class="popular-destinations__button button button--transparent">Все направления</a>
+                </div>
+
             </div>
         </section>
 

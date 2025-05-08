@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.destination-card {
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-light);
+    height: 100%;
+
+    &--popular {
+        position: relative;
+
+        &::before {
+            content: '';
+            @include square(rem(40));
+            position: absolute;
+            z-index: 10;
+            top: rem(10);
+            right: rem(10);
+            background: url('./../../icons/popular-destinations/arrow-1.svg') no-repeat;
+            filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
+            pointer-events: none;
+        }
+    }
+
+    &__img {
+        border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: rem(20) rem(24);
+    }
+
+    &__title {
+        margin-bottom: rem(8);
+    }
+
+    &__description {
+        font-size: rem(14);
+        font-weight: 400;
+    }
+
+}

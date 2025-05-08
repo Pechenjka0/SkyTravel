@@ -29,8 +29,12 @@
     --border-radius-md: #{rem(15)};
     --border-radius-sm: #{rem(10)};
 
+    --box-shadow: 0 0 #{rem(7)} #{rem(2)} rgba(0, 0, 0, 0.25);
+
     --font-family-base: 'Open Sans', sans-serif;
     --font-family-accent: 'Montserrat', sans-serif;
+
+    --section-padding-y: #{rem(100)};
 
     --container-width: #{rem(1000)};
     --container-padding-x: #{rem(16)};

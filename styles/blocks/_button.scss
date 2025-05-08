@@ -10,9 +10,20 @@
     font-weight: 600;
     color: var(--color-light);
 
+    &--transparent {
+        outline: rem(1) solid var(--color-accent);
+        background-color: transparent;
+        color: var(--color-accent);
+    }
+
     &:hover {
         outline: rem(1) solid var(--color-accent);
         background-color: transparent;
         color: var(--color-accent);
     }
+}
+
+.button--transparent:hover {
+    color: var(--color-light);
+    background-color: var(--color-accent);
 }

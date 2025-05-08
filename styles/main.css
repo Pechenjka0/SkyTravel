@@ -247,8 +247,10 @@ svg * {
   --border-radius-lg: 1.25rem;
   --border-radius-md: 0.9375rem;
   --border-radius-sm: 0.625rem;
+  --box-shadow: 0 0 0.4375rem 0.125rem rgba(0, 0, 0, 0.25);
   --font-family-base: "Open Sans", sans-serif;
   --font-family-accent: "Montserrat", sans-serif;
+  --section-padding-y: 6.25rem;
   --container-width: 62.5rem;
   --container-padding-x: 1rem;
   --transition-duration: 0.2s;
@@ -361,10 +363,20 @@ a[class] {
   font-weight: 600;
   color: var(--color-light);
 }
+.button--transparent {
+  outline: 0.0625rem solid var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+}
 .button:hover {
   outline: 0.0625rem solid var(--color-accent);
   background-color: transparent;
   color: var(--color-accent);
+}
+
+.button--transparent:hover {
+  color: var(--color-light);
+  background-color: var(--color-accent);
 }
 
 .hero {
@@ -438,7 +450,7 @@ a[class] {
 }
 
 .advantages {
-  padding-block: 6.25rem;
+  padding-block: var(--section-padding-y);
 }
 .advantages__title {
   text-align: center;
@@ -461,6 +473,76 @@ a[class] {
 }
 .advantages__item-title {
   margin-bottom: 1rem;
+}
+
+.popular-destinations {
+  padding-block: var(--section-padding-y);
+  background-color: var(--color-section-bg);
+}
+.popular-destinations__title, .popular-destinations__description {
+  text-align: center;
+}
+.popular-destinations__title {
+  margin-bottom: 1rem;
+}
+.popular-destinations__list {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "greece greece france" "italy china france";
+  margin-block: 3rem;
+}
+.popular-destinations__list .greece {
+  grid-area: greece;
+}
+.popular-destinations__list .france {
+  grid-area: france;
+}
+.popular-destinations__list .italy {
+  grid-area: italy;
+}
+.popular-destinations__list .china {
+  grid-area: china;
+}
+.popular-destinations__button-wrapper {
+  text-align: center;
+}
+
+.destination-card {
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-light);
+  height: 100%;
+}
+.destination-card--popular {
+  position: relative;
+}
+.destination-card--popular::before {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: url("./../../icons/popular-destinations/arrow-1.svg") no-repeat;
+  filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+.destination-card__img {
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  object-fit: cover;
+}
+.destination-card__content {
+  padding: 1.25rem 1.5rem;
+}
+.destination-card__title {
+  margin-bottom: 0.5rem;
+}
+.destination-card__description {
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=main.css.map */
