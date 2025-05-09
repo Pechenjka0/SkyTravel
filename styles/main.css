@@ -586,4 +586,65 @@ a[class] {
   margin-bottom: 1rem;
 }
 
+.reviews {
+  padding-block: var(--section-padding-y);
+  background-color: var(--color-section-bg);
+}
+.reviews__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.reviews__description {
+  font-size: 1.125rem;
+  text-align: center;
+}
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+.reviews-card__rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.reviews-card__star {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: url("./../../icons/reviews/star.svg") center/contain no-repeat;
+}
+.reviews-card__description {
+  margin-bottom: 1.5rem;
+}
+.reviews-card__author {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+.reviews-card__img {
+  border-radius: 50%;
+}
+.reviews-card__name {
+  font-family: var(--font-family-accent);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.swiper {
+  margin-top: 4rem;
+  padding: 0.625rem !important;
+}
+.swiper-wrapper {
+  padding-bottom: 2.25rem;
+}
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-size: 0.75rem;
+}
+.swiper-pagination-bullet-active {
+  --swiper-pagination-color: var(--color-accent);
+}
+
 /*# sourceMappingURL=main.css.map */

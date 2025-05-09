@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyTravel</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 
@@ -112,7 +114,7 @@
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
                                 <img width="659" height="268" src="./images/popular-destination/1.jpg"
-                                alt="Направление Греция" class="destination-card__img">
+                                    alt="Направление Греция" class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Греция</h3>
@@ -127,12 +129,13 @@
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
                                 <img width="320" height="569" src="./images/popular-destination/2.jpg"
-                                alt="Направление Франция" class="destination-card__img">
+                                    alt="Направление Франция" class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Франция</h3>
                                 <div class="destination-card__description">
-                                    <p>Элегантность и романтика в каждом уголке. Прогуляйтесь по Парижу, исследуйте замки Луары.</p>
+                                    <p>Элегантность и романтика в каждом уголке. Прогуляйтесь по Парижу, исследуйте
+                                        замки Луары.</p>
                                 </div>
                             </div>
                         </article>
@@ -141,7 +144,7 @@
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
                                 <img width="320" height="168" src="./images/popular-destination/3.jpg"
-                                alt="Направление Италия" class="destination-card__img">
+                                    alt="Направление Италия" class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Италия</h3>
@@ -155,26 +158,28 @@
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
                                 <img width="320" height="168" src="./images/popular-destination/4.jpg"
-                                alt="Направление Китай" class="destination-card__img">
+                                    alt="Направление Китай" class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Китай</h3>
                                 <div class="destination-card__description">
-                                    <p>Страна контрастов с тысячелетней историей. Исследуйте Великую Китайскую стену и древние храмы.</p>
+                                    <p>Страна контрастов с тысячелетней историей. Исследуйте Великую Китайскую стену и
+                                        древние храмы.</p>
                                 </div>
                             </div>
                         </article>
                     </li>
-                    
+
                 </ul>
                 <div class="popular-destinations__button-wrapper">
-                    <a href="./destinations.html" class="popular-destinations__button button button--transparent">Все направления</a>
+                    <a href="./destinations.html" class="popular-destinations__button button button--transparent">Все
+                        направления</a>
                 </div>
 
             </div>
         </section>
 
-        <section class="work-process" aria-labelledby="work-process-title">
+        <section class="work-process visually-hidden" aria-labelledby="work-process-title">
             <div class="work-process__inner container">
                 <h2 class="work-process__title" id="work-process-title">Как проходит<br> работа с нами</h2>
                 <ul class="work-process__list">
@@ -185,7 +190,7 @@
                             <div class="work-process__description">
                                 <p>Расскажите нам, куда мечтаете поехать</p>
                             </div>
-                        </div>  
+                        </div>
                     </li>
                     <li class="work-process__item">
                         <span class="work-process__value">2</span>
@@ -194,7 +199,7 @@
                             <div class="work-process__description">
                                 <p>Мы подберём маршрут под ваши пожелания</p>
                             </div>
-                        </div>  
+                        </div>
                     </li>
                     <li class="work-process__item">
                         <span class="work-process__value">3</span>
@@ -203,7 +208,7 @@
                             <div class="work-process__description">
                                 <p>Согласуйте маршрут — мы подстроим его под вас.</p>
                             </div>
-                        </div>  
+                        </div>
                     </li>
                     <li class="work-process__item">
                         <span class="work-process__value">4</span>
@@ -212,9 +217,188 @@
                             <div class="work-process__description">
                                 <p>Оформим брони и все документы.</p>
                             </div>
-                        </div>  
+                        </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="reviews" aria-labelledby="reviews-title">
+            <div class="reviews__inner container">
+                <h2 class="reviews__title" id="reviews-title">Отзывы</h2>
+                <div class="reviews__description">
+                    <p>Реальные впечатления путешественников</p>
+                </div>
+
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="reviews-card">
+                                <div class="reviews-card__rating">
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                    <div class="reviews-card__star"></div>
+                                </div>
+                                <blockquote class="reviews-card__description">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </blockquote>
+                                <div class="reviews-card__author">
+                                    <img width="48" height="48" src="./images/reviews/1.png" alt=""
+                                        class="reviews-card__img">
+                                    <div class="reviews-card__name">
+                                        <p>Иван Иванов</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <!-- Пагинация -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
             </div>
         </section>
 

@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.reviews {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-section-bg);
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(16);
+    }
+
+    &__description {
+        font-size: rem(18);
+        text-align: center;
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        padding: rem(24);
+        background-color: var(--color-light);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--box-shadow);
+
+        &__rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: rem(16);
+        }
+
+        &__star {
+            @include square(rem(15));
+            background: url('./../../icons/reviews/star.svg') center / contain no-repeat;
+        }
+
+        &__description {
+            margin-bottom: rem(24);
+        }
+
+        &__author {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+        }
+
+        &__img {
+            border-radius: 50%;
+        }
+
+        &__name {
+            font-family: var(--font-family-accent);
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+    }
+}

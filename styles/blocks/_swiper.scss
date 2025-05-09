@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+
+.swiper {
+    margin-top: rem(64);
+    padding: rem(10) !important;
+
+    &-wrapper {
+        padding-bottom: rem(36);
+    }
+
+    &-pagination {
+        &-bullet {
+            --swiper-pagination-bullet-size: #{rem(12)};
+            
+
+            &-active {
+                --swiper-pagination-color: var(--color-accent);
+            }
+        }
+    }
+}
