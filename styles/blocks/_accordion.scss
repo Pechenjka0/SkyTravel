@@ -1,0 +1,62 @@
+@use '../helpers' as *;
+
+.accordion {
+    max-width: rem(661);
+    margin-inline: auto;
+    padding-inline: rem(12);
+
+    &__item {
+        position: relative;
+
+        &.active {
+            .accordion__title::after {
+                width: rem(16);
+                height: rem(33);
+                background: url('./../icons/arrow.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .accordion__content {
+                padding-bottom: rem(20);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            background: var(--color-gray-10);
+            width: 100%;
+            height: rem(1);
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-block: rem(20);
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: rem(33);
+            height: rem(16);
+            background: url('./../icons/plus.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__heading {
+        padding-right: 2rem;
+    }
+
+    &__content {
+        display: none;
+    }
+}

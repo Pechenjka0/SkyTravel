@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.faq {
+    padding-block: var(--section-padding-y);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__description {
+        margin-bottom: rem(64);
+    }
+
+    &__title,
+    &__description {
+        text-align: center;
+    }
+}
