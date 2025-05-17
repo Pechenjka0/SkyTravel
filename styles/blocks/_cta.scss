@@ -1,0 +1,65 @@
+@use '../helpers' as *;
+
+.cta {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-pink);
+    text-align: center;
+
+    &__inner {
+        max-width: rem(860);
+        margin-inline: auto;
+    }
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        gap: rem(12);
+        margin-top: rem(24);
+        margin-bottom: rem(16);
+
+        @include mobile-s {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        padding: rem(12) rem(16);
+        border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+        border: rem(1) solid var(--color-gray-20);
+        min-width: fluid(555, 120);
+
+        &:focus {
+            border-color: var(--color-accent);
+        }
+
+        &::placeholder {
+            font-size: rem(14);
+        }
+
+        @include mobile-s {
+            border-radius: var(--border-radius-lg);
+        }
+    }
+
+    &__button {
+        border: 0;
+    }
+
+    &__note {
+        text-wrap: balance;
+        font-size: rem(14);
+
+        a {
+            text-decoration: none;
+            color: var(--color-accent);
+
+            &:hover {
+                opacity: .7;
+            } 
+        }
+    }
+}

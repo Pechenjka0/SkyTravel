@@ -454,7 +454,7 @@
             </div>
         </section>
 
-        <section class="contacts-us" aria-labelledby="contacts-us-title">
+        <section class="contacts-us visually-hidden" aria-labelledby="contacts-us-title">
             <div class="contacts-us__inner container">
                 <h2 class="contacts-us__title" id="contacts-us-title">Свяжитесь с нами</h2>
                 <p class="contacts-us__description">У вас есть вопросы или вы готовы приступить к планированию
@@ -607,8 +607,8 @@
                                         name="checkbox" required>
                                     <span class="contact-form__checkbox-custom"></span>
                                     <span class="contact-form__checkbox-text">
-                                        Я согласен с 
-                                        <a href="#">Политикой конфиденциальности</a> 
+                                        Я согласен с
+                                        <a href="#">Политикой конфиденциальности</a>
                                         и
                                         <a href="#">Условиями предоставления услуг</a>
                                     </span>
@@ -619,6 +619,28 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="cta__inner container">
+                <h2 class="cta__title" id="cta-title">Подпишитесь на нашу рассылку новостей</h2>
+                <div class="cta__description">
+                    <p>Будьте в курсе наших последних туристических предложений, путеводителей по достопримечательностям
+                        и эксклюзивных предложений.</p>
+                </div>
+                <div class="cta__content">
+                    <form class="cta__form" action="#" method="post">
+                        <input 
+                        type="email" class="cta__input" 
+                        name="email" placeholder="Info@mail.ru" 
+                        required />
+                        <button type="submit" class="cta__button button">Подписаться</button>
+                    </form>
+                    <div class="cta__note">
+                        <p>Подписываясь, вы соглашаетесь с нашей <a href="#">политикой конфиденциальности</a> и даете согласие на получение рекламных электронных писем.</p>
+                    </div>
                 </div>
             </div>
         </section>
