@@ -1,0 +1,108 @@
+@use '../helpers' as *;
+
+.contact-form {
+    padding: rem(24);
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        margin-top: rem(24);
+    }
+
+    &__row {
+        display: flex;
+        gap: rem(24);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        width: 100%;
+    }
+
+    &__input,
+    &__textarea {
+        padding: rem(12) rem(16);
+        border-radius: var(--border-radius-sm);
+        border: rem(1) solid var(--color-gray-20);
+    }
+
+    &__input {
+        &:focus {
+            border-color: var(--color-accent);
+        }
+
+        &::placeholder {
+            font-size: rem(14);
+        }
+    }
+
+    &__textarea {
+        min-height: rem(101);
+        max-height: rem(250);
+        resize: vertical;
+
+        &:focus {
+            border-color: var(--color-accent);
+        }
+    }
+
+    &__checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: rem(9);
+    }
+
+    &__checkbox-input {
+        display: none;
+    }
+
+    &__checkbox-custom {
+        @include square(rem(20));
+
+        position: relative;
+        vertical-align: middle;
+        display: inline-block;
+        cursor: pointer;
+        border: rem(1) solid var(--color-gray-20);
+        border-radius: rem(5);
+    }
+
+    &__checkbox-text {
+        font-size: rem(14);
+        color: var(--color-body-text);
+        text-wrap: balance;
+
+        a {
+            text-decoration: none;
+            color: var(--color-accent);
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__button {
+        border: 0;
+    }
+}
+
+.contact-form__checkbox-input:checked + .contact-form__checkbox-custom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: rem(8);
+    height: rem(11);
+    border: solid var(--color-accent);
+    border-width: 0 rem(2) rem(2) 0;
+    transform: rotate(45deg);
+    
+}

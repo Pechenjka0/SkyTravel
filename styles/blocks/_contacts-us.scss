@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.contacts-us {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-section-bg);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__title,
+    &__description {
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(20);
+        margin-top: rem(64);
+    }
+}
