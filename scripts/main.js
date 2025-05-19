@@ -8,6 +8,19 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    breakpoints: {
+        768.98: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        480.98: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        320.98: {
+            slidesPerView: 1,
+        },
+    },
 });
 
 // Accordion
