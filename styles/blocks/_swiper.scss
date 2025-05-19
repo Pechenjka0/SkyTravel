@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .swiper {
-    margin-top: rem(64);
+    margin-top: fluid(64, 16);
     padding: rem(10) !important;
 
     &-wrapper {

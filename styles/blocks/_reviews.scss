@@ -35,6 +35,10 @@
 
         &__description {
             margin-bottom: rem(24);
+
+            @include mobile {
+                font-size: rem(14);
+            }
         }
 
         &__author {

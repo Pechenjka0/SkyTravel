@@ -631,6 +631,11 @@ a[class] {
 .reviews-card__description {
   margin-bottom: 1.5rem;
 }
+@media (width <= 48.06125rem) {
+  .reviews-card__description {
+    font-size: 0.875rem;
+  }
+}
 .reviews-card__author {
   display: flex;
   align-items: center;
@@ -646,7 +651,7 @@ a[class] {
 }
 
 .swiper {
-  margin-top: 4rem;
+  margin-top: clamp(1rem, -0.8rem + 7.68vw, 4rem);
   padding: 0.625rem !important;
 }
 .swiper-wrapper {
