@@ -671,7 +671,7 @@ a[class] {
   margin-bottom: 1rem;
 }
 .faq__description {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(1.5rem, 0rem + 6.4vw, 4rem);
 }
 .faq__title, .faq__description {
   text-align: center;
