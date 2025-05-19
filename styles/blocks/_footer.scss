@@ -1,0 +1,101 @@
+@use '../helpers' as *;
+
+.footer {
+    padding-block: rem(64);
+    font-size: rem(14);
+    background-color: var(--color-footer-bg);
+    color: var(--color-gray-10);
+
+    a {
+        color: var(--color-gray-10);
+
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+
+    &__description {
+        @include mobile-s {
+            text-align: center;
+        }
+    }
+
+    &__top {
+        display: grid;
+        grid-template-columns: 0.7fr 0.7fr 0.6fr 0.9fr;
+        gap: rem(20);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            gap: rem(24);
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        text-wrap: balance;
+
+        &:first-child {
+            gap: rem(8);
+        }
+
+        @include mobile-s {
+            align-items: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+
+        @include mobile-s {
+            align-items: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &-links,
+        &-time {
+            display: flex;
+            flex-direction: column;
+            gap: rem(4);
+        }
+    }
+
+    &__title {
+        color: var(--color-light);
+    }
+
+    &__bottom {
+        padding-top: rem(64);
+    }
+
+    &__legal {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: rem(35);
+        padding-top: rem(24);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: rem(1);
+            background: #1F2937;
+        }
+    }
+}

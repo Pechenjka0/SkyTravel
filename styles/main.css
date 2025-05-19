@@ -380,6 +380,18 @@ a[class] {
   background-color: var(--color-accent);
 }
 
+.socials-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.socials-icon a {
+  display: block;
+}
+.socials-icon a:hover {
+  color: var(--color-accent);
+}
+
 .hero {
   flex-grow: 1;
   display: flex;
@@ -765,17 +777,8 @@ a[class] {
   flex-direction: column;
   gap: 1.5rem;
 }
-.contact-info__socials-list {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 .contact-info__socials-list a {
-  display: block;
   color: var(--color-primary);
-}
-.contact-info__socials-list a:hover {
-  color: var(--color-accent);
 }
 .contact-info__socials-list svg {
   fill: var(--color-pink);
@@ -923,6 +926,96 @@ a[class] {
 }
 .cta__note a:hover {
   opacity: 0.7;
+}
+
+.footer {
+  padding-block: 4rem;
+  font-size: 0.875rem;
+  background-color: var(--color-footer-bg);
+  color: var(--color-gray-10);
+}
+.footer a {
+  color: var(--color-gray-10);
+}
+.footer a:hover {
+  color: var(--color-accent);
+}
+@media (width <= 30.06125rem) {
+  .footer__description {
+    text-align: center;
+  }
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 0.6fr 0.9fr;
+  gap: 1.25rem;
+}
+@media (width <= 48.06125rem) {
+  .footer__top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 30.06125rem) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-wrap: balance;
+}
+.footer__column:first-child {
+  gap: 0.5rem;
+}
+@media (width <= 30.06125rem) {
+  .footer__column {
+    align-items: center;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media (width <= 30.06125rem) {
+  .footer__list {
+    align-items: center;
+  }
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+.footer__item-links, .footer__item-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.footer__title {
+  color: var(--color-light);
+}
+.footer__bottom {
+  padding-top: 4rem;
+}
+.footer__legal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.1875rem;
+  padding-top: 1.5rem;
+}
+.footer__legal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background: #1F2937;
 }
 
 /*# sourceMappingURL=main.css.map */

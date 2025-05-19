@@ -42,17 +42,8 @@
         gap: rem(24);
 
         &-list {
-            display: flex;
-            align-items: center;
-            gap: rem(16);
-
             a {
-                display: block;
                 color: var(--color-primary);
-
-                &:hover {
-                    color: var(--color-accent);
-                }
             }
 
             svg {

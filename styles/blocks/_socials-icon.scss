@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.socials-icon {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    a {
+        display: block;
+        
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+}
