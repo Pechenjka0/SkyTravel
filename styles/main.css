@@ -497,12 +497,17 @@ a[class] {
 .popular-destinations__title {
   margin-bottom: 1rem;
 }
+@media (width <= 48.06125rem) {
+  .popular-destinations__description {
+    font-size: 0.875rem;
+  }
+}
 .popular-destinations__list {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "greece greece france" "italy china france";
-  margin-block: 3rem;
+  margin-block: clamp(1.5rem, 0.6rem + 3.84vw, 3rem);
 }
 .popular-destinations__list .greece {
   grid-area: greece;
@@ -515,6 +520,18 @@ a[class] {
 }
 .popular-destinations__list .china {
   grid-area: china;
+}
+@media (width <= 64.06125rem) {
+  .popular-destinations__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "greece france" "italy china";
+  }
+}
+@media (width <= 48.06125rem) {
+  .popular-destinations__list {
+    grid-template-columns: 1fr;
+    grid-template-areas: "greece" "france" "italy" "china";
+  }
 }
 .popular-destinations__button-wrapper {
   text-align: center;
@@ -542,9 +559,17 @@ a[class] {
   filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
   pointer-events: none;
 }
+.destination-card__link {
+  width: 100%;
+}
+.destination-card__link:hover .destination-card__img {
+  scale: 1.05;
+}
 .destination-card__img {
+  width: 100%;
   border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
   object-fit: cover;
+  transition: var(--transition-duration);
 }
 .destination-card__content {
   padding: 1.25rem 1.5rem;

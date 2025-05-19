@@ -13,20 +13,53 @@
         margin-bottom: rem(16);
     }
 
+    &__description {
+        @include mobile {
+            font-size: rem(14);
+        }
+    }
+
     &__list {
         display: grid;
         gap: rem(20);
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "greece greece france"
             "italy china france";
 
-            .greece { grid-area: greece; }
-            .france { grid-area: france; }
-            .italy { grid-area: italy; }
-            .china { grid-area: china; }
+        .greece {
+            grid-area: greece;
+        }
 
-            margin-block: rem(48);
+        .france {
+            grid-area: france;
+        }
+
+        .italy {
+            grid-area: italy;
+        }
+
+        .china {
+            grid-area: china;
+        }
+
+        margin-block: fluid(48, 24);
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "greece france"
+                "italy china";
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "greece" 
+                "france"
+                "italy" 
+                "china";
+        }
     }
 
     &__button {
@@ -35,4 +68,3 @@
         }
     }
 }
-

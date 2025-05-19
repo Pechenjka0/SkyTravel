@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class="popular-destinations visually-hidden" aria-labelledby="popular-destinations-title">
+        <section class="popular-destinations" aria-labelledby="popular-destinations-title">
             <div class="popular-destinations__inner container">
                 <h2 id="popular-destinations-title" class="popular-destinations__title">Популярные направления</h2>
                 <div class="popular-destinations__description">
@@ -113,8 +113,11 @@
                     <li class="popular-destinations__item greece">
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
-                                <img width="659" height="268" src="./images/popular-destination/1.jpg"
-                                    alt="Направление Греция" class="destination-card__img">
+                                <picture>
+                                    <source srcset="./images/popular-destination/greece.webp" media="(max-width: 1023px)">
+                                    <source srcset="./images/popular-destination/1.jpg" media="(min-width: 1024px)">
+                                    <img class="destination-card__img" src="./images/popular-destination/greece.jpg" alt="Направление Греция">
+                                </picture>
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Греция</h3>
@@ -128,8 +131,11 @@
                     <li class="popular-destinations__item france">
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
-                                <img width="320" height="569" src="./images/popular-destination/2.jpg"
-                                    alt="Направление Франция" class="destination-card__img">
+                                <picture>
+                                    <source srcset="./images/popular-destination/france.jpg" media="(max-width: 1023px)">
+                                    <source srcset="./images/popular-destination/2.jpg" media="(min-width: 1024px)">
+                                    <img class="destination-card__img" src="./images/popular-destination/france.jpg" alt="Направление Франция">
+                                </picture>
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Франция</h3>
@@ -143,8 +149,8 @@
                     <li class="popular-destinations__item italy">
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
-                                <img width="320" height="168" src="./images/popular-destination/3.jpg"
-                                    alt="Направление Италия" class="destination-card__img">
+                                <img src="./images/popular-destination/3.jpg" alt="Направление Италия"
+                                    class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Италия</h3>
@@ -157,8 +163,8 @@
                     <li class="popular-destinations__item china">
                         <article class="destination-card destination-card--popular">
                             <a href="#!" class="destination-card__link">
-                                <img width="320" height="168" src="./images/popular-destination/4.jpg"
-                                    alt="Направление Китай" class="destination-card__img">
+                                <img src="./images/popular-destination/4.jpg" alt="Направление Китай"
+                                    class="destination-card__img">
                             </a>
                             <div class="destination-card__content">
                                 <h3 class="destination-card__title h4">Китай</h3>

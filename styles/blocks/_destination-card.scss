@@ -23,9 +23,22 @@
         }
     }
 
+    &__link {
+        width: 100%;
+        
+
+        &:hover {
+            .destination-card__img {
+                scale: 1.05;
+            }
+        }
+    }
+
     &__img {
+        width: 100%;
         border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
         object-fit: cover;
+        transition: var(--transition-duration);
     }
 
     &__content {
