@@ -6,6 +6,12 @@
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
 
+    &__title {
+        @include mobile-s {
+            text-align: center;
+        }
+    }
+
     &__fields {
         display: flex;
         flex-direction: column;
@@ -16,6 +22,11 @@
     &__row {
         display: flex;
         gap: rem(24);
+
+        @include mobile {
+            flex-direction: column;
+            gap: rem(16);
+        }
     }
 
     &__field {
@@ -56,6 +67,10 @@
         display: flex;
         align-items: center;
         gap: rem(9);
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__checkbox-input {

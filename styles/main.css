@@ -312,7 +312,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.25rem;
+  font-size: clamp(1.625rem, 1.25rem + 1.6vw, 2.25rem);
 }
 
 h3, .h3 {
@@ -320,12 +320,11 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.375rem;
+  font-size: clamp(1.125rem, 0.975rem + 0.64vw, 1.375rem);
 }
 
-h5, .h5,
-h6, .h6 {
-  font-size: 1.125rem;
+h5, .h5 {
+  font-size: clamp(0.9375rem, 0.825rem + 0.48vw, 1.125rem);
 }
 
 a, button,
@@ -731,6 +730,11 @@ a[class] {
 .contacts-us__title {
   margin-bottom: 1rem;
 }
+@media (width <= 48.06125rem) {
+  .contacts-us__description {
+    font-size: 0.875rem;
+  }
+}
 .contacts-us__title, .contacts-us__description {
   text-align: center;
 }
@@ -738,7 +742,13 @@ a[class] {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
-  margin-top: 4rem;
+  margin-top: clamp(1.5rem, 0rem + 6.4vw, 4rem);
+}
+@media (width <= 64.06125rem) {
+  .contacts-us__content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .contact-info {
@@ -790,6 +800,11 @@ a[class] {
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow);
 }
+@media (width <= 30.06125rem) {
+  .contact-form__title {
+    text-align: center;
+  }
+}
 .contact-form__fields {
   display: flex;
   flex-direction: column;
@@ -799,6 +814,12 @@ a[class] {
 .contact-form__row {
   display: flex;
   gap: 1.5rem;
+}
+@media (width <= 48.06125rem) {
+  .contact-form__row {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 .contact-form__field {
   display: flex;
@@ -829,6 +850,11 @@ a[class] {
   display: flex;
   align-items: center;
   gap: 0.5625rem;
+}
+@media (width <= 48.06125rem) {
+  .contact-form__checkbox-label {
+    display: block;
+  }
 }
 .contact-form__checkbox-input {
   display: none;

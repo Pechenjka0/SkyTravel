@@ -8,6 +8,12 @@
         margin-bottom: rem(16);
     }
 
+    &__description {
+        @include mobile {
+            font-size:  rem(14);
+        }
+    }
+
     &__title,
     &__description {
         text-align: center;
@@ -17,6 +23,11 @@
         display: flex;
         align-items: flex-start;
         gap: rem(20);
-        margin-top: rem(64);
+        margin-top: fluid(64, 24);
+
+        @include laptop {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 }

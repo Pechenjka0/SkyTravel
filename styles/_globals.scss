@@ -24,7 +24,8 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: rem(36);
+    @include fluid-text(36, 26);
+    // font-size: rem(36);
 }
 
 h3, .h3 {
@@ -32,12 +33,13 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    font-size: rem(22);
+    @include fluid-text(22, 18);
+    // font-size: rem(22);
 }
 
-h5, .h5,
-h6, .h6 {
-    font-size: rem(18);
+h5, .h5 {
+    @include fluid-text(18, 15);
+    // font-size: rem(18);
 }
 
 a, button,
