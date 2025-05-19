@@ -910,6 +910,11 @@ a[class] {
 .cta__title {
   margin-bottom: 1rem;
 }
+@media (width <= 30.06125rem) {
+  .cta__description {
+    font-size: 0.875rem;
+  }
+}
 .cta__form {
   display: flex;
   justify-content: center;
