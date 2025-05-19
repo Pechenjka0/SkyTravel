@@ -5,15 +5,20 @@
 
     &__title {
         text-align: center;
-        margin-bottom: rem(64);
+        margin-bottom: fluid(64, 24);
+    }
+
+    &__description {
+        @include mobile-s {
+            font-size: rem(14);
+        }
     }
 
     &__list {
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        align-items: center;
-        column-gap: rem(20);
+        gap: rem(20);
 
         &::before {
             content: '';
@@ -22,6 +27,18 @@
             height: rem(1);
             background: var(--color-body-text);
             bottom: 57%;
+
+            @include mobile {
+                content: unset;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
         }
     }
 

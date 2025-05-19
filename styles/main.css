@@ -562,14 +562,18 @@ a[class] {
 }
 .work-process__title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(1.5rem, 0rem + 6.4vw, 4rem);
+}
+@media (width <= 30.06125rem) {
+  .work-process__description {
+    font-size: 0.875rem;
+  }
 }
 .work-process__list {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  column-gap: 1.25rem;
+  gap: 1.25rem;
 }
 .work-process__list::before {
   content: "";
@@ -578,6 +582,21 @@ a[class] {
   height: 0.0625rem;
   background: var(--color-body-text);
   bottom: 57%;
+}
+@media (width <= 48.06125rem) {
+  .work-process__list::before {
+    content: unset;
+  }
+}
+@media (width <= 48.06125rem) {
+  .work-process__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 30.06125rem) {
+  .work-process__list {
+    grid-template-columns: 1fr;
+  }
 }
 .work-process__item {
   text-align: center;
