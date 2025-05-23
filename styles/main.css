@@ -466,12 +466,17 @@ a[class] {
 }
 .advantages__title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(1.5rem, 0rem + 6.4vw, 4rem);
 }
 .advantages__list {
   display: grid;
-  column-gap: 1.25rem;
+  gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
+}
+@media (width <= 48.06125rem) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+  }
 }
 .advantages__item {
   display: flex;
@@ -483,8 +488,25 @@ a[class] {
 .advantages__item-icon {
   margin-bottom: 1.5rem;
 }
+@media (width <= 48.06125rem) {
+  .advantages__item-icon {
+    width: 3.6875rem;
+    height: 3.6875rem;
+    margin-bottom: 0.75rem;
+  }
+}
 .advantages__item-title {
   margin-bottom: 1rem;
+}
+@media (width <= 48.06125rem) {
+  .advantages__item-title {
+    margin-bottom: 0.75rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .advantages__item__description {
+    font-size: 0.875rem;
+  }
 }
 
 .popular-destinations {

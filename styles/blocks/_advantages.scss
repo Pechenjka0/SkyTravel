@@ -5,13 +5,17 @@
 
     &__title {
         text-align: center;
-        margin-bottom: rem(64);
+        margin-bottom: fluid(64, 24);
     }
 
     &__list {
         display: grid;
-        column-gap: rem(20);
+        gap: rem(20);
         grid-template-columns: repeat(3, 1fr);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -23,10 +27,25 @@
 
         &-icon {
             margin-bottom: rem(24);
+
+            @include mobile {
+                @include square(rem(59));
+                margin-bottom: rem(12);
+            }
         }
 
         &-title {
             margin-bottom: rem(16);
+
+            @include mobile {
+                margin-bottom: rem(12);
+            }
+        }
+
+        &__description {
+            @include mobile-s {
+                font-size: rem(14);
+            }
         }
     }
 }
