@@ -25,10 +25,19 @@
 
     &__title {
         margin-bottom: rem(16);
+
+        @include mobile {
+            margin-bottom: rem(12);
+        }
     }
 
     &__description {
         font-size: rem(18);
         margin-bottom: rem(24);
+
+        @include mobile {
+            font-size: rem(16);
+            margin-bottom: rem(16);
+        }
     }
 }

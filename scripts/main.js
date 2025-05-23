@@ -109,3 +109,15 @@ function accordion() {
 };
 
 accordion();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerButton = document.querySelector('.header__burger-button');
+    const menu = document.querySelector('.header__menu');
+
+    burgerButton.addEventListener('click', function () {
+        burgerButton.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.classList.toggle('no-scroll'); // если нужно отключать прокрутку
+    });
+});

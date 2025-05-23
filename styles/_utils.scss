@@ -12,12 +12,24 @@
 
 .hidden-mobile {
     @include mobile {
-        display: none !important; 
+        display: none !important;
     }
 }
 
 .visually-mobile {
     @include mobile-above {
         display: none !important;
+    }
+}
+
+.no-scroll {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #00000090;
     }
 }

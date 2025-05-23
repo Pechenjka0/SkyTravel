@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.burger__button {
+    &-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: rem(5);
+        background-color: var(--color-accent);
+        border-radius: var(--border-radius-lg);
+        transition: var(--transition-duration);
+
+        &:nth-child(1) {
+            top: 25%;
+        }
+
+        &:nth-child(3) {
+            top: 75%;
+        }
+    }
+}
