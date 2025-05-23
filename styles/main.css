@@ -300,9 +300,15 @@ svg * {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family-base);
   font-size: 1rem;
   color: var(--color-body-text);
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1, .h1,
