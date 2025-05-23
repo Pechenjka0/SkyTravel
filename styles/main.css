@@ -451,11 +451,31 @@ a[class] {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.25rem;
 }
+@media (width <= 48.06125rem) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+}
 .about__title {
   margin-bottom: 1rem;
 }
+@media (width <= 48.06125rem) {
+  .about__title {
+    margin-bottom: 0.75rem;
+  }
+}
 .about__description p:not(:last-child) {
   margin-bottom: 0.75rem;
+}
+@media (width <= 30.06125rem) {
+  .about__description {
+    font-size: 0.875rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .about__media {
+    display: none;
+  }
 }
 .about__img {
   border-radius: var(--border-radius-lg);
@@ -504,7 +524,7 @@ a[class] {
   }
 }
 @media (width <= 30.06125rem) {
-  .advantages__item__description {
+  .advantages__item-description {
     font-size: 0.875rem;
   }
 }

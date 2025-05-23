@@ -42,7 +42,7 @@
             }
         }
 
-        &__description {
+        &-description {
             @include mobile-s {
                 font-size: rem(14);
             }

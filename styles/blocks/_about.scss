@@ -9,15 +9,33 @@
         align-items: center;
         grid-template-columns: repeat(2, 1fr);
         column-gap: rem(20);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {
         margin-bottom: rem(16);
+
+        @include mobile {
+            margin-bottom: rem(12);
+        }
     }
 
     &__description {
         p:not(:last-child) {
             margin-bottom: rem(12);
+        }
+
+        @include mobile-s {
+            font-size: rem(14);
+        }
+    }
+
+    &__media {
+        @include mobile {
+            display: none;
         }
     }
 
