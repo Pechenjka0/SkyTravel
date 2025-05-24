@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.destinations {
+    padding-block: rem(64);
+    background-color: var(--color-section-bg);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+}

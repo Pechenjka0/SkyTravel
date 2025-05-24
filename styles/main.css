@@ -1250,4 +1250,12 @@ a[class] {
   background: #1F2937;
 }
 
+.destinations {
+  padding-block: 4rem;
+  background-color: var(--color-section-bg);
+}
+.destinations__title {
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
