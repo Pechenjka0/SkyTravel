@@ -7,4 +7,10 @@
     &__title {
         margin-bottom: rem(16);
     }
+
+    &__description {
+        @include mobile-s {
+            font-size: rem(14);
+        }
+    }
 }

@@ -1257,5 +1257,10 @@ a[class] {
 .destinations__title {
   margin-bottom: 1rem;
 }
+@media (width <= 30.06125rem) {
+  .destinations__description {
+    font-size: 0.875rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
