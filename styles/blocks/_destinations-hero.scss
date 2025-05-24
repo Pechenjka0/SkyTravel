@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.destinations-hero {
+    padding-block: rem(64);
+    background-color: var(--color-section-bg);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__description {
+        @include mobile-s {
+            font-size: rem(14);
+        }
+    }
+}

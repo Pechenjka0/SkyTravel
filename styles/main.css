@@ -380,6 +380,7 @@ a[class] {
   font-size: 1.375rem;
   font-weight: 600;
   color: var(--color-light);
+  border: none;
 }
 .button--transparent {
   outline: 0.0625rem solid var(--color-accent);
@@ -692,10 +693,12 @@ a[class] {
 
 .destination-card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow);
   background-color: var(--color-light);
-  height: 100%;
 }
 .destination-card--popular {
   position: relative;
@@ -712,27 +715,53 @@ a[class] {
   filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
   pointer-events: none;
 }
+.destination-card--popular .destination-card__img {
+  width: 100%;
+  max-height: none;
+}
 .destination-card__link {
   width: 100%;
+  color: var(--color-accent);
 }
 .destination-card__link:hover .destination-card__img {
   scale: 1.05;
 }
 .destination-card__img {
   width: 100%;
+  max-height: 10.5rem;
   border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
   object-fit: cover;
   transition: var(--transition-duration);
 }
 .destination-card__content {
   padding: 1.25rem 1.5rem;
-}
-.destination-card__title {
-  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 .destination-card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3.75rem;
+  margin-top: 0.5rem;
   font-size: 0.875rem;
   font-weight: 400;
+}
+.destination-card__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.destination-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3.125rem;
+}
+.destination-card__footer .destination-card__link {
+  width: unset;
 }
 
 .work-process {
@@ -1377,8 +1406,40 @@ a[class] {
 
 .tag {
   font-size: 0.875rem;
+  font-weight: 500;
   padding: 0.125rem 0.625rem;
   border-radius: var(--border-radius-sm);
+}
+.tag--europe {
+  color: var(--color-europe-text);
+  background-color: var(--color-europe-bg);
+}
+.tag--asia {
+  color: var(--color-asia-text);
+  background-color: var(--color-asia-bg);
+}
+
+.destinations {
+  padding-top: 4rem;
+  padding-bottom: 6.25rem;
+  background-color: var(--color-section-bg);
+}
+.destinations__group {
+  margin-bottom: 4rem;
+}
+.destinations__group-title {
+  margin-bottom: 2rem;
+}
+.destinations__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.125rem, 1fr));
+  gap: 1.25rem;
+}
+.destinations__list-item {
+  min-width: 18.75rem;
+}
+.destinations__button-wrapper {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

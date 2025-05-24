@@ -2,6 +2,17 @@
 
 .tag {
     font-size: rem(14);
+    font-weight: 500;
     padding: rem(2) rem(10);
     border-radius: var(--border-radius-sm);
+
+    &--europe {
+        color: var(--color-europe-text);
+        background-color: var(--color-europe-bg);
+    }
+
+    &--asia {
+        color: var(--color-asia-text);
+        background-color: var(--color-asia-bg);
+    }
 }

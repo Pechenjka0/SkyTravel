@@ -2,10 +2,12 @@
 
 .destination-card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
     background-color: var(--color-light);
-    height: 100%;
 
     &--popular {
         position: relative;
@@ -21,11 +23,16 @@
             filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
             pointer-events: none;
         }
+
+        .destination-card__img {
+            width: 100%;
+            max-height: none;
+        }
     }
 
     &__link {
         width: 100%;
-        
+        color: var(--color-accent);
 
         &:hover {
             .destination-card__img {
@@ -36,6 +43,7 @@
 
     &__img {
         width: 100%;
+        max-height: rem(168);
         border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
         object-fit: cover;
         transition: var(--transition-duration);
@@ -43,15 +51,42 @@
 
     &__content {
         padding: rem(20) rem(24);
+
+        display: flex;
+        flex-direction: column;
+
     }
 
-    &__title {
-        margin-bottom: rem(8);
-    }
+    &__body {}
 
     &__description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: rem(60);
+
+        margin-top: rem(8);
         font-size: rem(14);
         font-weight: 400;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: rem(50);
+    }
+
+    &__footer .destination-card__link {
+        width: unset;
     }
 
 }

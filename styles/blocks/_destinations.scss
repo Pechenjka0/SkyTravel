@@ -1,16 +1,30 @@
 @use '../helpers' as *;
 
-.destinations-hero {
-    padding-block: rem(64);
+.destinations {
+    padding-top: rem(64);
+    padding-bottom: rem(100);
     background-color: var(--color-section-bg);
 
-    &__title {
-        margin-bottom: rem(16);
-    }
+    &__group {
+        margin-bottom: rem(64);
 
-    &__description {
-        @include mobile-s {
-            font-size: rem(14);
+        &-title {
+            margin-bottom: rem(32);
         }
     }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
+        gap: rem(20);
+
+        &-item {
+            min-width: rem(300);
+        }
+    }
+
+    &__button-wrapper {
+        text-align: center;
+    }
+
 }
