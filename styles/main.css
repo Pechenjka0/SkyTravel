@@ -1251,15 +1251,15 @@ a[class] {
   background: #1F2937;
 }
 
-.destinations {
+.destinations-hero {
   padding-block: 4rem;
   background-color: var(--color-section-bg);
 }
-.destinations__title {
+.destinations-hero__title {
   margin-bottom: 1rem;
 }
 @media (width <= 30.06125rem) {
-  .destinations__description {
+  .destinations-hero__description {
     font-size: 0.875rem;
   }
 }
