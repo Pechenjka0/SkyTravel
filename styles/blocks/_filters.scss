@@ -1,0 +1,130 @@
+@use '../helpers' as *;
+
+.filters {
+    padding-block: rem(32);
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__search {
+        position: relative;
+        margin-bottom: rem(32);
+
+        &:hover>.filters__search-button svg {
+            fill: var(--color-accent);
+        }
+
+        &-input {
+            padding-block: rem(14);
+            padding-left: rem(16);
+            padding-right: rem(60);
+            width: 100%;
+            border-radius: var(--border-radius-md);
+            border: rem(1) solid var(--color-gray-20);
+
+            &:hover {
+                border: rem(1) solid var(--color-accent);
+            }
+
+            &::placeholder {
+                font-size: rem(14);
+                color: var(--color-placeholder);
+            }
+        }
+
+        &-button {
+            position: absolute;
+            right: rem(16);
+            top: 56%;
+            transform: translate(0, -50%);
+
+            svg {
+                fill: var(--color-gray-30);
+            }
+        }
+    }
+
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+        margin-bottom: rem(24);
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__select {
+        position: relative;
+        padding: rem(14) rem(43) rem(14) rem(16);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        font-size: rem(18);
+        color: inherit;
+        width: 100%;
+        border-radius: var(--border-radius-md);
+        border: rem(1) solid var(--color-gray-20);
+        background-image: url(./../../icons/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position-x: 97%;
+        background-position-y: center;
+        cursor: pointer;
+
+        &:hover {
+            border: rem(1) solid var(--color-accent);
+        }
+    }
+
+    &__active {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(16);
+
+        &-label {
+            @include mobile-s {
+                font-size: rem(14);
+            }
+        }
+
+        &-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: rem(8);
+        }
+    }
+
+    &__tag {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(4);
+        padding: rem(2) rem(10);
+        font-size: rem(14);
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius-sm);
+
+        &-remove {
+            width: rem(12);
+            height: rem(17);
+            padding: 0;
+
+            svg {
+                fill: var(--color-gray-30);
+            }
+
+            &:hover svg {
+                fill: var(--color-accent);
+            }
+        }
+    }
+
+    &__clear {
+        color: var(--color-accent);
+    }
+}

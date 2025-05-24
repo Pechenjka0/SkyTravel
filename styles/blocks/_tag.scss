@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.tag {
+    font-size: rem(14);
+    padding: rem(2) rem(10);
+    border-radius: var(--border-radius-sm);
+}

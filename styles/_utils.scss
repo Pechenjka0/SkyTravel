@@ -29,6 +29,7 @@
     &::before {
         content: '';
         position: absolute;
+        z-index: 900;
         inset: 0;
         background: #00000090;
     }

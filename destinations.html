@@ -40,14 +40,69 @@
             <span class="burger__button-line"></span>
         </button>
     </header>
-    
-    
+
+
     <main>
         <section class="destinations" aria-labelledby="destinations-title">
             <div class="destinations__inner container">
                 <h1 class="destinations__title" id="destinations-title">Направления</h1>
                 <div class="destinations__description">
-                    <p>Познакомьтесь с нашей тщательно отобранной коллекцией удивительных туристических направлений по всему миру</p>
+                    <p>Познакомьтесь с нашей тщательно отобранной коллекцией удивительных туристических направлений по
+                        всему миру</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="filters" aria-labelledby="filters-title">
+            <div class="filters__inner container">
+                <h2 class="filters__title visually-hidden" id="filters-title">Фильтры направлений</h2>
+                <div class="filters__search">
+                    <input type="text" class="filters__search-input"
+                        placeholder="Найдите направление по названию, стране, городу...">
+                    <button class="filters__search-button" aria-label="Поиск">
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.8117 2.25C10.2869 2.25013 8.78416 2.61491 7.42898 3.31391C6.07379 4.0129 4.90542 5.02584 4.02133 6.26822C3.13724 7.5106 2.56307 8.94639 2.34673 10.4558C2.13039 11.9652 2.27815 13.5045 2.77769 14.9452C3.27722 16.3858 4.11404 17.6862 5.21833 18.7377C6.32262 19.7892 7.66235 20.5614 9.12576 20.9898C10.5892 21.4182 12.1338 21.4905 13.6308 21.2005C15.1278 20.9106 16.5338 20.2668 17.7314 19.323L21.8399 23.4315C22.0521 23.6364 22.3363 23.7498 22.6313 23.7473C22.9262 23.7447 23.2084 23.6264 23.417 23.4178C23.6256 23.2092 23.7439 22.927 23.7464 22.6321C23.749 22.3371 23.6356 22.0529 23.4307 21.8407L19.3222 17.7323C20.4337 16.3222 21.1257 14.6277 21.3192 12.8427C21.5126 11.0577 21.1996 9.25427 20.4159 7.63885C19.6323 6.02344 18.4097 4.66128 16.888 3.70826C15.3664 2.75524 13.6071 2.24988 11.8117 2.25ZM4.49919 11.8125C4.49919 9.8731 5.26961 8.01314 6.64097 6.64178C8.01233 5.27042 9.87229 4.5 11.8117 4.5C13.7511 4.5 15.611 5.27042 16.9824 6.64178C18.3538 8.01314 19.1242 9.8731 19.1242 11.8125C19.1242 13.7519 18.3538 15.6119 16.9824 16.9832C15.611 18.3546 13.7511 19.125 11.8117 19.125C9.87229 19.125 8.01233 18.3546 6.64097 16.9832C5.26961 15.6119 4.49919 13.7519 4.49919 11.8125Z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="filters__dropdown">
+
+                    <select class="filters__select" name="region">
+                        <option disabled selected>Регион/Континент</option>
+                        <option value="Европа">Европа</option>
+                        <option value="Азия">Азия</option>
+                    </select>
+
+                    <select class="filters__select" name="price">
+                        <option disabled selected>Диапазон цены</option>
+                        <option value="low">до 50 000 ₽</option>
+                        <option value="mid">50 000 — 150 000 ₽</option>
+                        <option value="high">свыше 150 000 ₽</option>
+                    </select>
+
+                    <select class="filters__select" name="theme">
+                        <option disabled selected>Тема путешествия</option>
+                        <option value="beach">Пляжный отдых</option>
+                        <option value="adventure">Приключения</option>
+                        <option value="culture">Культура</option>
+                    </select>
+                </div>
+                <div class="filters__active">
+                    <span class="filters__active-label">Активные фильтры:</span>
+                    <div class="filters__active-tags">
+                        <span class="filters__tag">Европа
+                            <button class="filters__tag-remove" aria-label="Удалить фильтр">
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.17938 10.3901L5.99938 7.20511L2.81938 10.3901L2.10938 9.68011L5.29438 6.50011L2.10938 3.32011L2.81938 2.61011L5.99938 5.79511L9.17938 2.61511L9.88438 3.32011L6.70438 6.50011L9.88438 9.68011L9.17938 10.3901Z" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                    <button class="filters__clear">Очистить</button>
                 </div>
             </div>
         </section>
