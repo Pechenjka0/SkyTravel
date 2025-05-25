@@ -1521,4 +1521,25 @@ a[class] {
   height: clamp(3.4375rem, 2.9125rem + 2.24vw, 4.3125rem);
 }
 
+.contacts-hero {
+  padding-block: 4rem;
+  background-color: var(--color-section-bg);
+}
+.contacts-hero__title {
+  margin-bottom: 1rem;
+}
+
+.contact-map {
+  width: 100%;
+  height: 25rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  border: none;
+}
+@media (width <= 30.06125rem) {
+  .contact-map {
+    height: 14.375rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

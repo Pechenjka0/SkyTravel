@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.contact-map {
+    width: 100%;
+    height: rem(400);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    border: none;
+
+    @include mobile-s {
+        height: rem(230);
+    }
+}
