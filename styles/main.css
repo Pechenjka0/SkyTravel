@@ -1442,4 +1442,17 @@ a[class] {
   text-align: center;
 }
 
+.services-hero {
+  padding-block: 4rem;
+  background-color: var(--color-section-bg);
+}
+.services-hero__title {
+  margin-bottom: 1rem;
+}
+@media (width <= 30.06125rem) {
+  .services-hero__description {
+    font-size: 0.875rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
