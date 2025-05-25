@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.services {
+    padding-block: var(--section-padding-y);
+
+    &__title {
+        margin-bottom: rem(16);
+    }
+
+    &__description {
+        max-width: rem(500);
+        margin-inline: auto;
+        font-size: rem(18);
+
+        @include mobile {
+            font-size: rem(16);
+        }
+
+        @include mobile-s {
+            font-size: rem(14);
+        }
+    }
+
+    &__title,
+    &__description {
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
+        gap: rem(20);
+        margin-top: rem(24);
+    }
+}

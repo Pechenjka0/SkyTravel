@@ -1455,4 +1455,64 @@ a[class] {
   }
 }
 
+.services {
+  padding-block: var(--section-padding-y);
+}
+.services__title {
+  margin-bottom: 1rem;
+}
+.services__description {
+  max-width: 31.25rem;
+  margin-inline: auto;
+  font-size: 1.125rem;
+}
+@media (width <= 48.06125rem) {
+  .services__description {
+    font-size: 1rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .services__description {
+    font-size: 0.875rem;
+  }
+}
+.services__title, .services__description {
+  text-align: center;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.125rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.service-card {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+}
+@media (width <= 30.06125rem) {
+  .service-card {
+    gap: 0.625rem;
+  }
+}
+.service-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (width <= 30.06125rem) {
+  .service-card__body {
+    gap: 0.625rem;
+  }
+}
+.service-card__icon {
+  width: clamp(3.4375rem, 2.9125rem + 2.24vw, 4.3125rem);
+  height: clamp(3.4375rem, 2.9125rem + 2.24vw, 4.3125rem);
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.service-card {
+    display: flex;
+    gap: rem(16);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(24);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+
+    @include mobile-s {
+        gap: rem(10);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        @include mobile-s {
+            gap: rem(10);
+        }
+    }
+
+    &__icon {
+        @include square(fluid(69, 55));
+    }
+}
