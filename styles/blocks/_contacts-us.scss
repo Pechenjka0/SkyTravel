@@ -4,6 +4,10 @@
     padding-block: var(--section-padding-y);
     background-color: var(--color-section-bg);
 
+    &--light-bg {
+        background-color: var(--color-light);
+    }
+
     &__title {
         margin-bottom: rem(16);
     }
@@ -24,6 +28,10 @@
         align-items: flex-start;
         gap: rem(20);
         margin-top: fluid(64, 24);
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
 
         @include laptop {
             flex-direction: column-reverse;
