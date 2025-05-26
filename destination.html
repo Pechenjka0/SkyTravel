@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTravel</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header class="header header--light container">
+        <a href="/" class="header__logo logo">
+            <img width="156" height="32" src="./images/logo-black.svg" alt="SkyTravel логотип">
+        </a>
+
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="./index.html" class="header__menu-link">Главная</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./destinations.html" class="header__menu-link">Направления</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./services.html" class="header__menu-link">Услуги</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./contacts.html" class="header__menu-link is-active">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="header__burger-button burger-button visible-mobile">
+            <span class="burger__button-line"></span>
+            <span class="burger__button-line"></span>
+            <span class="burger__button-line"></span>
+        </button>
+    </header>
+
+
+    <main>
+
+
+        <section class="cta " aria-labelledby="cta-title">
+            <div class="cta__inner container">
+                <h2 class="cta__title" id="cta-title">Подпишитесь на нашу рассылку новостей</h2>
+                <div class="cta__description">
+                    <p>Будьте в курсе наших последних туристических предложений, путеводителей по достопримечательностям
+                        и эксклюзивных предложений.</p>
+                </div>
+                <div class="cta__content">
+                    <form class="cta__form" action="#" method="post">
+                        <input type="email" class="cta__input" name="email" placeholder="Info@mail.ru" required />
+                        <button type="submit" class="cta__button button">Подписаться</button>
+                    </form>
+                    <div class="cta__note">
+                        <p>Подписываясь, вы соглашаетесь с нашей <a href="#">политикой конфиденциальности</a> и даете
+                            согласие на получение рекламных электронных писем.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__top">
+                <div class="footer__column">
+                    <a href="/" class="footer__logo logo">
+                        <img width="156" height="32" src="./images/logo-white.svg" alt="SkyTravel логотип">
+                    </a>
+                    <div class="footer__description">
+                        <p>С 2010 года мы создаем незабываемые впечатления от путешествий. Ваше путешествие начинается с
+                            нас.</p>
+                    </div>
+                    <div class="footer__socials">
+                        <ul class="footer__socials-list socials-icon">
+                            <li>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" />
+                                        <path
+                                            d="M13.3828 21H15.6914V15.9411H17.7715L18 13.4274H15.6914V12.1579C15.6914 11.9904 15.7522 11.8297 15.8605 11.7113C15.9687 11.5929 16.1155 11.5263 16.2686 11.5263H18V9H16.2686C15.5032 9 14.7692 9.33271 14.228 9.92493C13.6869 10.5171 13.3828 11.3204 13.3828 12.1579V13.4274H12.2285L12 15.9411H13.3828V21Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" />
+                                        <path
+                                            d="M12.48 9H17.52C19.44 9 21 10.56 21 12.48V17.52C21 18.443 20.6334 19.3281 19.9807 19.9807C19.3281 20.6334 18.443 21 17.52 21H12.48C10.56 21 9 19.44 9 17.52V12.48C9 11.557 9.36664 10.6719 10.0193 10.0193C10.6719 9.36664 11.557 9 12.48 9ZM12.36 10.2C11.7871 10.2 11.2377 10.4276 10.8326 10.8326C10.4276 11.2377 10.2 11.7871 10.2 12.36V17.64C10.2 18.834 11.166 19.8 12.36 19.8H17.64C18.2129 19.8 18.7623 19.5724 19.1674 19.1674C19.5724 18.7623 19.8 18.2129 19.8 17.64V12.36C19.8 11.166 18.834 10.2 17.64 10.2H12.36ZM18.15 11.1C18.3489 11.1 18.5397 11.179 18.6803 11.3197C18.821 11.4603 18.9 11.6511 18.9 11.85C18.9 12.0489 18.821 12.2397 18.6803 12.3803C18.5397 12.521 18.3489 12.6 18.15 12.6C17.9511 12.6 17.7603 12.521 17.6197 12.3803C17.479 12.2397 17.4 12.0489 17.4 11.85C17.4 11.6511 17.479 11.4603 17.6197 11.3197C17.7603 11.179 17.9511 11.1 18.15 11.1ZM15 12C15.7956 12 16.5587 12.3161 17.1213 12.8787C17.6839 13.4413 18 14.2044 18 15C18 15.7956 17.6839 16.5587 17.1213 17.1213C16.5587 17.6839 15.7956 18 15 18C14.2044 18 13.4413 17.6839 12.8787 17.1213C12.3161 16.5587 12 15.7956 12 15C12 14.2044 12.3161 13.4413 12.8787 12.8787C13.4413 12.3161 14.2044 12 15 12ZM15 13.2C14.5226 13.2 14.0648 13.3896 13.7272 13.7272C13.3896 14.0648 13.2 14.5226 13.2 15C13.2 15.4774 13.3896 15.9352 13.7272 16.2728C14.0648 16.6104 14.5226 16.8 15 16.8C15.4774 16.8 15.9352 16.6104 16.2728 16.2728C16.6104 15.9352 16.8 15.4774 16.8 15C16.8 14.5226 16.6104 14.0648 16.2728 13.7272C15.9352 13.3896 15.4774 13.2 15 13.2Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="YouTube">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" />
+                                        <path
+                                            d="M20.7491 12.249C20.681 12.0076 20.5471 11.7873 20.361 11.6101C20.1749 11.4329 19.9429 11.3049 19.6882 11.239C18.7527 11 15 11 15 11C15 11 11.2473 11 10.3118 11.239C10.0571 11.3049 9.82514 11.4329 9.639 11.6101C9.45285 11.7873 9.31905 12.0076 9.25091 12.249C9 13.1409 9 15 9 15C9 15 9 16.8591 9.25091 17.751C9.31896 17.9925 9.45273 18.2129 9.63888 18.3902C9.82503 18.5675 10.0571 18.6955 10.3118 18.7615C11.2478 19 15 19 15 19C15 19 18.7527 19 19.6882 18.7615C19.9429 18.6955 20.175 18.5675 20.3611 18.3902C20.5473 18.2129 20.681 17.9925 20.7491 17.751C21 16.8601 21 15 21 15C21 15 21 13.1409 20.7491 12.249ZM13.7727 16.6883V13.3123L16.9091 15.0005L13.7727 16.6883Z"
+                                            stroke="black" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Telegram">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="30" height="30" rx="15" />
+                                        <path
+                                            d="M19.9773 10.0971C19.9773 10.0971 21.0873 9.62098 20.9945 10.7772C20.9639 11.2534 20.6865 12.92 20.4705 14.7224L19.7305 20.0621C19.7305 20.0621 19.6688 20.8444 19.1136 20.9805C18.5587 21.1162 17.7262 20.5043 17.5719 20.3682C17.4484 20.2661 15.2593 18.7355 14.4884 17.9875C14.2724 17.7833 14.0256 17.3753 14.5193 16.8992L17.757 13.498C18.127 13.0894 18.497 12.1371 16.9553 13.2937L12.6381 16.5245C12.6381 16.5245 12.1447 16.8649 11.2198 16.5588L9.21523 15.8784C9.21523 15.8784 8.47522 15.3683 9.73952 14.8582C12.8233 13.2598 16.6162 11.6274 19.977 10.0968"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title h5">Быстрые ссылки</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./index.html">Главная</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./destinations.html">Направления</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./services.html">Услуги</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title h5">Направления</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./tour/greec.html">Греция</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./tour/italy.html">Италия</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./tour/china.html">Китай</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./tour/france.html">Франция</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__item-link" href="./tour/turkey.html">Турция</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title h5">Наши контакты</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <span class="footer__item-icon">
+                                <img width="30" height="30" src="./icons/geo-transparent.svg" alt="" aria-hidden="true">
+                            </span>
+                            <address>г. Москва, ул. Примерная, д. 15, офис 302</address>
+                        </li>
+                        <li class="footer__item">
+                            <span class="footer__item-icon">
+                                <img width="30" height="30" src="./icons/phone-transparent.svg" alt=""
+                                    aria-hidden="true">
+                            </span>
+                            <a class="footer__item-link" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        </li>
+                        <li class="footer__item">
+                            <span class="footer__item-icon">
+                                <img width="30" height="30" src="./icons/email-transparent.svg" alt=""
+                                    aria-hidden="true">
+                            </span>
+                            <span class="footer__item-links">
+                                <a class="footer__item-link" href="mailto:info@mail.ru">info@mail.ru</a>
+                                <a class="footer__item-link" href="mailto:info-info@mail.ru">info-info@mail.ru</a>
+                            </span>
+                        </li>
+                        <div class="footer__item">
+                            <span class="footer__item-icon">
+                                <img width="30" height="30" src="./icons/watch-transparent.svg" alt=""
+                                    aria-hidden="true">
+                            </span>
+                            <span class="footer__item-time">
+                                <span>ПН-ПТ: 9:00 - 22:00</span>
+                                <span>СБ-ВС: 10:00 - 20:00</span>
+                            </span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <a href="#!" class="footer__link" rel="nofollow">Политика конфиденциальности</a>
+                    <a href="#!" class="footer__link" rel="nofollow">Условия предоставления услуг</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
