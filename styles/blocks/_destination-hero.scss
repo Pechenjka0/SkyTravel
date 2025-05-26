@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.destination-hero {
+    &__img {
+        width: 100%;
+        height: fluid(570, 200);
+        object-fit: cover;
+    }
+}
