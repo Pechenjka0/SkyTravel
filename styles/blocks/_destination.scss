@@ -1,0 +1,117 @@
+@use '../helpers' as *;
+
+.destination {
+    padding-bottom: var(--section-padding-y);
+
+    p {
+        @include mobile-s {
+            font-size: rem(14);
+        }
+    }
+
+    p:not(:last-child) {
+        --paragraphMarginBottom: #{rem(12)};
+
+        margin-bottom: var(--paragraphMarginBottom);
+    }
+
+    &-hero {
+        &__img {
+            width: 100%;
+            height: fluid(570, 200);
+            object-fit: cover;
+            margin-bottom: fluid(32, 16);
+        }
+    }
+
+    &__back {
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: rem(6);
+            color: var(--color-accent);
+            margin-bottom: fluid(32, 16);
+        }
+    }
+
+    &-content-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr;
+        gap: rem(20);
+
+        @include tablet-lg {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(12);
+    }
+
+    &__raiting {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        margin-bottom: rem(16);
+    }
+
+    &__stars {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__star {
+        @include square(rem(15));
+
+        background: url('./../icons/star.svg') center / contain no-repeat;
+    }
+
+    &__description {
+        margin-bottom: fluid(42, 22);
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        gap: rem(14);
+        margin-bottom: fluid(54, 26);
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+        margin-bottom: rem(64);
+    }
+
+    &__tab {
+        &-title {
+            margin-bottom: rem(16);
+
+            @include mobile-s {
+                margin-bottom: rem(12);
+            }
+        }
+    }
+
+    &__season-table {
+        &__title {
+            margin-bottom: fluid(32, 16);
+        }
+    }
+
+    &__season-table {
+        
+    }
+
+    &__sidebar {
+        position: sticky;
+        top: rem(16);
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        gap: rem(32);
+
+
+    }
+}

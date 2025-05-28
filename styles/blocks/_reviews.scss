@@ -30,7 +30,7 @@
 
         &__star {
             @include square(rem(15));
-            background: url('./../../icons/reviews/star.svg') center / contain no-repeat;
+            background: url('./../../icons/star.svg') center / contain no-repeat;
         }
 
         &__description {

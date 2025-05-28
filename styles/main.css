@@ -334,7 +334,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: clamp(1.375rem, 1.15rem + 0.96vw, 1.75rem);
 }
 
 h4, .h4 {
@@ -852,7 +852,7 @@ a[class] {
 .reviews-card__star {
   width: 0.9375rem;
   height: 0.9375rem;
-  background: url("./../../icons/reviews/star.svg") center/contain no-repeat;
+  background: url("./../../icons/star.svg") center/contain no-repeat;
 }
 .reviews-card__description {
   margin-bottom: 1.5rem;
@@ -1542,10 +1542,307 @@ a[class] {
   }
 }
 
+.destination {
+  padding-bottom: var(--section-padding-y);
+}
+@media (width <= 30.06125rem) {
+  .destination p {
+    font-size: 0.875rem;
+  }
+}
+.destination p:not(:last-child) {
+  --paragraphMarginBottom: 0.75rem;
+  margin-bottom: var(--paragraphMarginBottom);
+}
 .destination-hero__img {
   width: 100%;
   height: clamp(12.5rem, -1.375rem + 59.2vw, 35.625rem);
   object-fit: cover;
+  margin-bottom: clamp(1rem, 0.4rem + 2.56vw, 2rem);
+}
+.destination__back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-accent);
+  margin-bottom: clamp(1rem, 0.4rem + 2.56vw, 2rem);
+}
+.destination-content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 1.25rem;
+}
+@media (width <= 56.31125rem) {
+  .destination-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.destination__title {
+  margin-bottom: 0.75rem;
+}
+.destination__raiting {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+.destination__stars {
+  display: inline-flex;
+  align-items: center;
+}
+.destination__star {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: url("./../icons/star.svg") center/contain no-repeat;
+}
+.destination__description {
+  margin-bottom: clamp(1.375rem, 0.625rem + 3.2vw, 2.625rem);
+}
+.destination__tags {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: clamp(1.625rem, 0.575rem + 4.48vw, 3.375rem);
+}
+.destination__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.destination__tab-title {
+  margin-bottom: 1rem;
+}
+@media (width <= 30.06125rem) {
+  .destination__tab-title {
+    margin-bottom: 0.75rem;
+  }
+}
+.destination__season-table__title {
+  margin-bottom: clamp(1rem, 0.4rem + 2.56vw, 2rem);
+}
+.destination__sidebar {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 2rem;
+}
+
+.table {
+  width: 100%;
+  text-wrap: balance;
+  border: 0.0625rem solid var(--color-gray-20);
+}
+.table-row {
+  border: 0.0625rem solid var(--color-gray-20);
+}
+@media (width <= 31.31125rem) {
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.table-value {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  padding: 1rem 1.0625rem;
+}
+@media (width <= 31.31125rem) {
+  .table-value {
+    text-align: center;
+    padding: 0.625rem 0.75rem;
+  }
+}
+.table-value--large {
+  font-size: 1.125rem;
+}
+.table-value--gray {
+  color: var(--color-gray-30);
+}
+.table-value--text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.weather-card {
+  max-width: 25.3125rem;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-lg);
+}
+@media (width <= 56.31125rem) {
+  .weather-card {
+    max-width: 100%;
+  }
+}
+.weather-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid var(--color-gray-20);
+}
+.weather-card__title-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.weather-card__temp-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+@media (width <= 56.31125rem) {
+  .weather-card__temp-wrapper {
+    justify-content: center;
+  }
+}
+.weather-card__icon--large {
+  width: 2.6875rem;
+  height: 2.6875rem;
+}
+.weather-card__icon--small {
+  width: 1rem;
+  height: 0.875rem;
+}
+.weather-card__current-temp {
+  display: flex;
+  flex-direction: column;
+}
+.weather-card__temp {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+.weather-card__temp--large {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 0.9;
+}
+.weather-card__indicators {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.weather-card__indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.weather-card__indicator-value {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+.weather-card__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1rem;
+}
+@media (width <= 31.31125rem) {
+  .weather-card__list {
+    flex-direction: column;
+    align-items: unset;
+    gap: 0.75rem;
+  }
+}
+.weather-card__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+@media (width <= 31.31125rem) {
+  .weather-card__item {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.facts-card {
+  max-width: 25.3125rem;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-lg);
+}
+@media (width <= 56.31125rem) {
+  .facts-card {
+    max-width: 100%;
+  }
+}
+.facts-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+@media (width <= 56.31125rem) {
+  .facts-card__list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .facts-card__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (width <= 31.31125rem) {
+  .facts-card__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.facts-card__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (width <= 56.31125rem) {
+  .facts-card__item {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+.facts-card__content {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+.facts-card__value {
+  color: var(--color-primary);
+}
+
+.booking-promo {
+  max-width: 20rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-pink);
+  border-radius: var(--border-radius-lg);
+}
+@media (width <= 56.31125rem) {
+  .booking-promo {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+.booking-promo__description {
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=main.css.map */

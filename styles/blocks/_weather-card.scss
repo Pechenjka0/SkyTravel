@@ -1,0 +1,111 @@
+@use '../helpers' as *;
+
+.weather-card {
+    max-width: rem(405);
+    padding: rem(24);
+    font-size: rem(12);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-lg);
+
+    @include tablet-lg {
+        max-width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        padding-bottom: rem(24);
+        border-bottom: rem(1) solid var(--color-gray-20);
+    }
+
+    &__title-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24);
+    }
+
+    &__date {}
+
+    &__temp-wrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(16);
+
+        @include tablet-lg {
+            justify-content: center;
+        }
+    }
+
+    &__icon {
+        &--large {
+            @include square(rem(43));
+        }
+
+        &--small {
+            width: rem(16);
+            height: rem(14);
+        }
+    }
+
+    &__current-temp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__temp {
+        color: var(--color-primary);
+        font-size: rem(16);
+
+        &--large {
+            font-size: rem(22);
+            font-weight: 600;
+            line-height: .9;
+        }
+    }
+
+    &__indicators {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(4);
+
+        &-value {
+            font-size: rem(16);
+            color: var(--color-primary);
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: rem(6);
+        margin-top: rem(16);
+
+        @include mobile-md {
+            flex-direction: column;
+            align-items: unset;
+            gap: rem(12);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: rem(4);
+
+        @include mobile-md {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}

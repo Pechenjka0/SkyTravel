@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+
+.facts-card {
+    max-width: rem(405);
+    padding: rem(24);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-lg);
+
+    @include tablet-lg {
+        max-width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        margin-top: rem(16);
+
+        @include tablet-lg {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: rem(16);
+        }
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mobile-md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+
+        @include tablet-lg {
+            text-align: center;
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        font-size: rem(14);
+    }
+
+    &__value {
+        color: var(--color-primary);
+    }
+}

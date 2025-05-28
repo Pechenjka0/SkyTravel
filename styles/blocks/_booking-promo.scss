@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.booking-promo {
+    max-width: rem(320);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(16);
+    padding: rem(24);
+    background-color: var(--color-pink);
+    border-radius: var(--border-radius-lg);
+
+    @include tablet-lg {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    &__description {
+        font-size: rem(14);
+    }
+}

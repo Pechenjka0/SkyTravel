@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.table {
+    width: 100%;
+    text-wrap: balance;
+    border: rem(1) solid var(--color-gray-20);
+
+    &-row {
+        border: rem(1) solid var(--color-gray-20);
+
+        @include mobile-md {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &-value {
+        font-size: rem(14);
+
+        color: var(--color-primary);
+        padding: rem(16) rem(17);
+
+        @include mobile-md {
+            text-align: center;
+            padding: rem(10) rem(12);
+        }
+
+        &--large {
+            font-size: rem(18);
+        }
+
+        &--gray {
+            color: var(--color-gray-30);
+        }
+
+        &--text-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyTravel</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 
@@ -21,13 +23,13 @@
                     <a href="./index.html" class="header__menu-link">Главная</a>
                 </li>
                 <li class="header__menu-item">
-                    <a href="./destinations.html" class="header__menu-link">Направления</a>
+                    <a href="./destinations.html" class="header__menu-link is-active">Направления</a>
                 </li>
                 <li class="header__menu-item">
                     <a href="./services.html" class="header__menu-link">Услуги</a>
                 </li>
                 <li class="header__menu-item">
-                    <a href="./contacts.html" class="header__menu-link is-active">Контакты</a>
+                    <a href="./contacts.html" class="header__menu-link">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -41,11 +43,250 @@
 
 
     <main>
-        <section class="destination-hero">
-            <img class="destination-hero__img" src="./images/123.jpg" alt="">
-            <a href="./destinations.html" class="destinations__back-link">
-                <span><img src="./icons/arrow.svg" alt=""></span>
-                Вернуться ко всем направлениям</a>
+        <section class="destination">
+            <div class="destination-hero">
+                <img class="destination-hero__img" src="./images/123.jpg" alt="">
+            </div>
+
+            <div class="destination__back container">
+                <a href="./destinations.html" class="destination__back-link">
+                    <span><img src="./icons/destination/arrow-left.svg" alt=""></span>
+                    Вернуться ко всем направлениям
+                </a>
+            </div>
+
+
+            <div class="destination-content-wrapper container" aria-labelledby="destination-content-title">
+                <div class="destination-content__inner">
+                    <h1 class="destination__title h2" id="destination-content-title">Lorem Inpus</h1>
+                    <div class="destination__raiting">
+                        <div class="destination__stars">
+                            <span class="destination__star"></span>
+                            <span class="destination__star"></span>
+                            <span class="destination__star"></span>
+                            <span class="destination__star"></span>
+                            <span class="destination__star"></span>
+                        </div>
+                        <div class="destination__reviews">
+                            <span class="destination__reviews-total__raiting">5/5</span>
+                            <span class="destination__reviews-total__reviews">(1734 Отзывов)</span>
+                        </div>
+                    </div>
+                    <div class="destination__description">
+                        <p>Откройте для себя Вечный город — колыбель европейской культуры и истории. Прогуляйтесь по
+                            улочкам, по которым ходили цезари, насладитесь видом Колизея, испейте итальянский эспрессо с
+                            видом на Пантеон и загадайте желание у фонтана Треви.</p>
+                        <p>Этот тур идеально подойдёт тем, кто ценит архитектуру, искусство, вкусную еду и настоящую
+                            атмосферу Италии. В программу входят экскурсии, свободное время для самостоятельных прогулок
+                            и, конечно, незабываемая итальянская кухня.</p>
+                    </div>
+                    <div class="destination__tags">
+                        <span class="destination-tag tag tag--europe">Пляжи</span>
+                        <span class="destination-tag tag tag--europe">Культура</span>
+                        <span class="destination-tag tag tag--europe">Люкс</span>
+                    </div>
+                    <div class="destination__details">
+                        <div class="destination__tab">
+                            <h2 class="destination__tab-title h3">О Риме</h2>
+                            <div class="destination__tab-description">
+                                <p>Рим — столица Италии и один из самых красивых городов Европы. Он сочетает в себе
+                                    величие древности и энергию современности. Здесь можно насладиться атмосферой уютных
+                                    улочек, вкусной итальянской кухни и неповторимого южного колорита. Рим очаровывает с
+                                    первого взгляда и остаётся в сердце навсегда.</p>
+                            </div>
+                        </div>
+                        <div class="destination__tab">
+                            <h2 class="destination__tab-title h3">История & Культура</h2>
+                            <div class="destination__tab-description">
+                                <p>Рим — это колыбель европейской цивилизации. Именно здесь зародилась Римская империя,
+                                    оставившая после себя архитектурные и культурные памятники мирового значения.
+                                    Колизей, Форум, Пантеон, Ватикан, произведения Рафаэля и Микеланджело — каждый шаг в
+                                    этом городе связан с историей, искусством и глубокими культурными традициями.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination__season-wrapper">
+                        <h2 class="destination__season-table__title h3">Когда ехать в Рим</h2>
+
+                        <table class="destination__season-table table">
+                            <tr class="table-row">
+                                <td class="table-value table-value--large table-value--gray">Сезон</td>
+                                <td class="table-value table-value--large table-value--gray">Месяцы</td>
+                                <td class="table-value table-value--large table-value--gray">Погода</td>
+                                <td class="table-value table-value--large table-value--gray">Рекомендации</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-value">Весна</td>
+                                <td class="table-value">Апрель–май</td>
+                                <td class="table-value table-value--text-center">
+                                    <span>Тепло</span>
+                                    <span>(17–25°C)</span>
+                                </td>
+                                <td class="table-value">Лучшее время: комфортная погода, меньше туристов</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-value">Лето</td>
+                                <td class="table-value">Июнь–август</td>
+                                <td class="table-value table-value--text-center">
+                                    <span>Жарко</span>
+                                    <span>(28–38°C)</span>
+                                </td>
+                                <td class="table-value">Пик сезона, многолюдно и очень жарко, особенно в августе
+                                </td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-value">Осень</td>
+                                <td class="table-value">Сентябрь–октябрь</td>
+                                <td class="table-value table-value--text-center">
+                                    <span>Тепло</span>
+                                    <span>(18–26°C)</span>
+                                </td>
+                                <td class="table-value">Идеальное время: тёплая погода и меньше туристов</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-value">Зима</td>
+                                <td class="table-value">Ноябрь–март</td>
+                                <td class="table-value table-value--text-center">
+                                    <span>Прохладно</span>
+                                    <span>(8–15°C)</span>
+                                </td>
+                                <td class="table-value">Мало туристов, уютная атмосфера,
+                                    возможны дожди</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+                <aside class="destination__sidebar">
+                    <div class="weather-card">
+                        <div class="weather-card__header">
+                            <div class="weather-card__title-block">
+                                <h3 class="weather-card__title h5">Текущая погода</h3>
+                                <time datetime="2025-05-06" class="weather-card__date">Обновлено: 6 Мая, 2025</time>
+                            </div>
+                            <div class="weather-card__temp-wrapper">
+                                <img src="./icons/destination/sun.svg" alt=""
+                                    class="weather-card__icon weather-card__icon--large">
+                                <div class="weather-card__current-temp">
+                                    <span class="weather-card__temp weather-card__temp--large">26°C</span>
+                                    <span>Солнечно</span>
+                                </div>
+                            </div>
+                            <div class="weather-card__indicators">
+                                <div class="weather-card__indicator">
+                                    <span class="weather-card__indicator-name">Влажность</span>
+                                    <span class="weather-card__indicator-value">62%</span>
+                                </div>
+                                <div class="weather-card__indicator">
+                                    <span class="weather-card__indicator-name">Ветер</span>
+                                    <span class="weather-card__indicator-value">12 км/ч</span>
+                                </div>
+                                <div class="weather-card__indicator">
+                                    <span class="weather-card__indicator-name">Уф-индекс</span>
+                                    <span class="weather-card__indicator-value">Высокий</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather-card__body">
+                            <h4 class="weather-card__body-title visually-hidden">Прогноз</h4>
+                            <ul class="weather-card__list" aria-label="Прогноз на неделю">
+                                <li class="weather-card__item">
+                                    <span class="weather-card__day">ПН</span>
+                                    <img class="weather-card__icon weather-card__icon--small"
+                                        src="./icons/destination/sun.svg" alt="">
+                                    <span class="weather-card__temp">26°C</span>
+                                </li>
+                                <li class="weather-card__item">
+                                    <span class="weather-card__day">ВТ</span>
+                                    <img class="weather-card__icon weather-card__icon--small"
+                                        src="./icons/destination/cloud.svg" alt="">
+                                    <span class="weather-card__temp">26°C</span>
+                                </li>
+                                <li class="weather-card__item">
+                                    <span class="weather-card__day">СР</span>
+                                    <img class="weather-card__icon weather-card__icon--small"
+                                        src="./icons/destination/sun.svg" alt="">
+                                    <span class="weather-card__temp">26°C</span>
+                                </li>
+                                <li class="weather-card__item">
+                                    <span class="weather-card__day">ЧТ</span>
+                                    <img class="weather-card__icon weather-card__icon--small"
+                                        src="./icons/destination/cloud.svg" alt="">
+                                    <span class="weather-card__temp">26°C</span>
+                                </li>
+                                <li class="weather-card__item">
+                                    <span class="weather-card__day">ПТ</span>
+                                    <img class="weather-card__icon weather-card__icon--small"
+                                        src="./icons/destination/cloud.svg" alt="">
+                                    <span class="weather-card__temp">26°C</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="facts-card">
+                        <h4 class="facts-card__title h5">Краткие факты</h4>
+                        <ul class="facts-card__list">
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/geo.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Локация</span>
+                                    <span class="facts-card__value">Италия, Рим</span>
+                                </div>
+                            </li>
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/earth.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Площадь</span>
+                                    <span class="facts-card__value">1 287 км²</span>
+                                </div>
+                            </li>
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/human.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Население</span>
+                                    <span class="facts-card__value">2 748 109</span>
+                                </div>
+                            </li>
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/language.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Язык</span>
+                                    <span class="facts-card__value">Итальянский</span>
+                                    <span class="facts-card__value">Английский</span>
+                                </div>
+                            </li>
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/currency.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Валюта</span>
+                                    <span class="facts-card__value">Евро</span>
+                                </div>
+                            </li>
+                            <li class="facts-card__item">
+                                <img aria-hidden="true" src="./icons/destination/time.svg" alt=""
+                                    class="facts-card__icon">
+                                <div class="facts-card__content">
+                                    <span class="facts-card__label">Часовой пояс</span>
+                                    <span class="facts-card__value">UTC+2 (GMT+2)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="booking-promo">
+                        <h4 class="booking-promo__title h3">Готовы к путешествию?</h4>
+                        <div class="booking-promo__description">
+                            <p>Забронируйте тур сейчас и начните своё приключение!</p>
+                        </div>
+                        <a href="./contacts.html" class="booking-promo__botton button">Забронировать</a>
+                    </div>
+                </aside>
+            </div>
         </section>
 
         <section class="cta " aria-labelledby="cta-title">
