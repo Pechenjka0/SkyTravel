@@ -1710,8 +1710,8 @@ a[class] {
   height: 2.6875rem;
 }
 .weather-card__icon--small {
-  width: 1rem;
-  height: 0.875rem;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 .weather-card__current-temp {
   display: flex;

@@ -44,8 +44,7 @@
         }
 
         &--small {
-            width: rem(16);
-            height: rem(14);
+            @include square(rem(26));
         }
     }
 
