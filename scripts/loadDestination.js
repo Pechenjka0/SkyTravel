@@ -114,5 +114,55 @@ export async function loadDestination() {
   preloadLink.href = tour.image;
   document.head.appendChild(preloadLink);
 
-  // Погода будет подключаться позже
+  // Погода
+  async function loadWeather(cityName) {
+    const API_KEY = '38546536bc4c43f6a67164213250306';
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${encodeURIComponent(cityName)}&days=6&aqi=no&alerts=no&lang=ru`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      // Дата обновления
+      const now = new Date(data.current.last_updated);
+      const formatter = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.querySelector('[data-weather-date]').textContent = `Обновлено: ${formatter.format(now)}`;
+
+      // Температура и описание
+      document.querySelector('[data-weather-temp]').textContent = `${Math.round(data.current.temp_c)}°C`;
+      document.querySelector('[data-weather-desc]').textContent = data.current.condition.text;
+
+      // Иконка
+      document.querySelector('[data-weather-icon]').src = `https:${data.current.condition.icon}`;
+
+      // Влажность, ветер, УФ
+      document.querySelector('[data-weather-humidity]').textContent = `${data.current.humidity}%`;
+      document.querySelector('[data-weather-wind]').textContent = `${data.current.wind_kph} км/ч`;
+      document.querySelector('[data-weather-uv]').textContent = data.current.uv;
+
+      // Прогноз
+      const forecastEl = document.querySelector('[data-weather-forecast]');
+      forecastEl.innerHTML = '';
+
+      const days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+      data.forecast.forecastday.slice(1, 6).forEach(day => {
+        const date = new Date(day.date);
+        const li = document.createElement('li');
+        li.className = 'weather-card__item';
+        li.innerHTML = `
+        <span class="weather-card__day">${days[date.getDay()]}</span>
+        <img class="weather-card__icon weather-card__icon--small" src="https:${day.day.condition.icon}" alt="">
+        <span class="weather-card__temp">${Math.round(day.day.avgtemp_c)}°C</span>
+      `;
+        forecastEl.appendChild(li);
+      });
+
+    } catch (e) {
+      console.error('Ошибка при загрузке погоды:', e);
+    }
+  }
+
+
+  await loadWeather(tour.weatherCity);
+
 }
