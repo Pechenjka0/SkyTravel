@@ -54,7 +54,7 @@
         </section>
 
         <section class="filters" aria-labelledby="filters-title">
-            <div class="filters__inner container">
+            <div data-filters-inner class="filters__inner container">
                 <h2 class="filters__title visually-hidden" id="filters-title">Фильтры направлений</h2>
                 <div class="filters__search">
                     <input type="text" class="filters__search-input"
@@ -69,40 +69,72 @@
 
                 <div class="filters__dropdown">
 
-                    <select class="filters__select" name="region">
+                    <select data-filter-region class="filters__select" name="region">
                         <option disabled selected>Регион/Континент</option>
                         <option value="Европа">Европа</option>
                         <option value="Азия">Азия</option>
                     </select>
 
-                    <select class="filters__select" name="price">
+                    <select data-filter-price class="filters__select" name="price">
                         <option disabled selected>Диапазон цены</option>
                         <option value="low">до 50 000 ₽</option>
                         <option value="mid">50 000 — 150 000 ₽</option>
                         <option value="high">свыше 150 000 ₽</option>
                     </select>
 
-                    <select class="filters__select" name="theme">
-                        <option disabled selected>Тема путешествия</option>
-                        <option value="beach">Пляжный отдых</option>
-                        <option value="adventure">Приключения</option>
-                        <option value="culture">Культура</option>
-                    </select>
-                </div>
-                <div class="filters__active">
-                    <span class="filters__active-label">Активные фильтры:</span>
-                    <div class="filters__active-tags">
-                        <span class="filters__tag">Европа
-                            <button class="filters__tag-remove" aria-label="Удалить фильтр">
-                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.17938 10.3901L5.99938 7.20511L2.81938 10.3901L2.10938 9.68011L5.29438 6.50011L2.10938 3.32011L2.81938 2.61011L5.99938 5.79511L9.17938 2.61511L9.88438 3.32011L6.70438 6.50011L9.88438 9.68011L9.17938 10.3901Z" />
-                                </svg>
-                            </button>
-                        </span>
+                    <!-- Выпадающий фильтр по темам -->
+                    <div data-filter="theme" class="filters__select filters__custom-select">
+                        <button data-filter-trigger type="button" class="filters__custom-trigger"
+                            aria-haspopup="listbox" aria-expanded="false">
+                            Тема путешествия
+                        </button>
+
+                        <div data-filter-dropdown class="filters__dropdown-list" hidden>
+                            <div class="filters__themes">
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="культура">Культура</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="архитектура">Архитектура</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="гастрономия">Гастрономия</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="история">История</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="море">Море</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="археология">Археология</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="романтика">Романтика</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="природа">Природа</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="приключения">Приключения</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="горячие источники">Горячие источники</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="пляжи">Пляжи</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="еда">Еда</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="технологии">Технологии</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="традиции">Традиции</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="духовность">Духовность</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="яркость">Яркость</label>
+                                <label class="filters__checkbox"><input data-filter-option type="checkbox" name="theme"
+                                        value="город">Город</label>
+                            </div>
+                        </div>
                     </div>
-                    <button class="filters__clear">Очистить</button>
+
+                </div>
+                <div data-active-wrapper class="filters__active" hidden>
+                    <span class="filters__active-label">Активные фильтры:</span>
+                    <div data-active-filters class="filters__active-tags"></div>
+                    <button data-filters-clear class="filters__clear">Очистить</button>
+                    <button data-filters-apply class="filters__apply">Применить</button>
                 </div>
             </div>
         </section>
@@ -111,10 +143,12 @@
             <div class="destinations__inner container">
                 <h2 class="destinations__title visually-hidden" id="destinations-title">destinations-title</h2>
 
-                <div class="destinations__group">
+                <div data-card-group class="destinations__group">
                     <h3 class="destinations__group-title">Европа</h3>
                     <ul class="destinations__list">
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Италия" data-region="Европа" data-price="50000"
+                            data-tags="культура,архитектура,гастрономия"
+                            class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=rome" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -138,7 +172,8 @@
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Греция" data-region="Европа" data-price="100000"
+                            data-tags="история,море,археология" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=athens" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -162,7 +197,8 @@
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Испания" data-region="Европа" data-price="75000"
+                            data-tags="культура,море,архитектура" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=barselona" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -186,7 +222,8 @@
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Франция" data-region="Европа" data-price="90000"
+                            data-tags="культура,гастрономия,романтика" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=paris" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -210,7 +247,8 @@
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Португалия" data-region="Европа" data-price="60000"
+                            data-tags="культура,гастрономия,море" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=lisbon" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -234,7 +272,9 @@
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Исландия" data-region="Европа" data-price="150000"
+                            data-tags="природа,приключения,горячие источники"
+                            class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=reykjavik" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -261,10 +301,11 @@
                     </ul>
                 </div>
 
-                <div class="destinations__group">
+                <div data-card-group class="destinations__group">
                     <h3 class="destinations__group-title">Азия</h3>
                     <ul class="destinations__list">
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Тайланд" data-region="Азия" data-price="70000"
+                            data-tags="пляжи,культура,еда" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=bangkok" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -282,13 +323,14 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 70.000 Рублей</span>
                                     <a href="destination.html?id=bangkok" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Япония" data-region="Азия" data-price="140000"
+                            data-tags="культура,технологии,традиции" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=tokyo" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -306,13 +348,14 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 140.000 Рублей</span>
                                     <a href="destination.html?id=tokyo" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Вьетнам" data-region="Азия" data-price="90000"
+                            data-tags="культура,природа,еда" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=hanoi" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -330,13 +373,14 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 90.000 Рублей</span>
                                     <a href="destination.html?id=hanoi" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Индонезия" data-region="Азия" data-price="80000"
+                            data-tags="пляжи,природа,духовность" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=jakarta" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -354,13 +398,14 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 80.000 Рублей</span>
                                     <a href="destination.html?id=jakarta" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Индия" data-region="Азия" data-price="90000"
+                            data-tags="культура,история,яркость" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=delhi" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -378,13 +423,14 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 90.000 Рублей</span>
                                     <a href="destination.html?id=delhi" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="destinations__list-item destination-card">
+                        <li data-card data-title="Сингапур" data-region="Азия" data-price="200000"
+                            data-tags="технологии,город,природа" class="destinations__list-item destination-card">
                             <div class="destination-card__header">
                                 <a href="destination.html?id=singapore" class="destination-card__link">
                                     <img class="destination-card__img" width="320" height="168"
@@ -402,7 +448,7 @@
                                     </div>
                                 </div>
                                 <div class="destination-card__footer">
-                                    <span class="destination-card__price">от 50.000 Рублей</span>
+                                    <span class="destination-card__price">от 200.000 Рублей</span>
                                     <a href="destination.html?id=singapore" class="destination-card__link">Перейти</a>
                                 </div>
                             </div>
@@ -411,10 +457,9 @@
                     </ul>
                 </div>
 
-                <div class="destinations__button-wrapper">
-                    <button class="button button--transparent">Все направления</button>
-                </div>
-
+                <p data-empty-message class="filters__empty" hidden>
+                    Ничего не найдено 😕
+                </p>
 
             </div>
         </section>

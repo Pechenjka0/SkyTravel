@@ -12,47 +12,61 @@ main {
     flex-grow: 1;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     font-family: var(--font-family-accent);
     color: var(--color-primary);
     font-weight: 600;
 }
 
-h1, .h1 {
+h1,
+.h1 {
     @include fluid-text(64, 36);
     // font-size: rem(64);
     font-weight: 700;
     line-height: 0.9;
 }
 
-h2, .h2 {
+h2,
+.h2 {
     @include fluid-text(36, 26);
     // font-size: rem(36);
 }
 
-h3, .h3 {
+h3,
+.h3 {
     @include fluid-text(28, 22);
     // font-size: rem(28);
 }
 
-h4, .h4 {
+h4,
+.h4 {
     @include fluid-text(22, 18);
     // font-size: rem(22);
 }
 
-h5, .h5 {
+h5,
+.h5 {
     @include fluid-text(18, 15);
     // font-size: rem(18);
 }
 
-a, button,
-label, input,
-textarea, select,
+a,
+button,
+label,
+input,
+textarea,
+select,
 svg * {
     transition-duration: var(--transition-duration);
 }
@@ -71,4 +85,8 @@ a {
     outline: rem(2) dashed var(--color-light);
     outline-offset: rem(4);
     transition-duration: 0s !important;
+}
+
+[data-active-wrapper][hidden] {
+    display: none !important;
 }
