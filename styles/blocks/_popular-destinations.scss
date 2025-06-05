@@ -25,7 +25,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "greece greece france"
-            "italy china france";
+            "italy iceland france";
 
         .greece {
             grid-area: greece;
@@ -39,8 +39,8 @@
             grid-area: italy;
         }
 
-        .china {
-            grid-area: china;
+        .iceland {
+            grid-area: iceland;
         }
 
         margin-block: fluid(48, 24);
@@ -49,7 +49,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "greece france"
-                "italy china";
+                "italy iceland";
         }
 
         @include mobile {
@@ -58,7 +58,7 @@
                 "greece" 
                 "france"
                 "italy" 
-                "china";
+                "iceland";
         }
     }
 

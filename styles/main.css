@@ -678,7 +678,7 @@ a[class] {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "greece greece france" "italy china france";
+  grid-template-areas: "greece greece france" "italy iceland france";
   margin-block: clamp(1.5rem, 0.6rem + 3.84vw, 3rem);
 }
 .popular-destinations__list .greece {
@@ -690,19 +690,19 @@ a[class] {
 .popular-destinations__list .italy {
   grid-area: italy;
 }
-.popular-destinations__list .china {
-  grid-area: china;
+.popular-destinations__list .iceland {
+  grid-area: iceland;
 }
 @media (width <= 64.06125rem) {
   .popular-destinations__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "greece france" "italy china";
+    grid-template-areas: "greece france" "italy iceland";
   }
 }
 @media (width <= 48.06125rem) {
   .popular-destinations__list {
     grid-template-columns: 1fr;
-    grid-template-areas: "greece" "france" "italy" "china";
+    grid-template-areas: "greece" "france" "italy" "iceland";
   }
 }
 .popular-destinations__button-wrapper {
