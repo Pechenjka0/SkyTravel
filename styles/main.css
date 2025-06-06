@@ -729,7 +729,7 @@ a[class] {
   z-index: 10;
   top: 0.625rem;
   right: 0.625rem;
-  background: url("./../../icons/popular-destinations/arrow-1.svg") no-repeat;
+  background: url("./../icons/popular-destinations/arrow-1.svg") no-repeat;
   filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.5));
   pointer-events: none;
 }
@@ -870,7 +870,7 @@ a[class] {
 .reviews-card__star {
   width: 0.9375rem;
   height: 0.9375rem;
-  background: url("./../../icons/star.svg") center/contain no-repeat;
+  background: url("./../icons/star.svg") center/contain no-repeat;
 }
 .reviews-card__description {
   margin-bottom: 1.5rem;
@@ -1378,7 +1378,7 @@ a[class] {
   width: 100%;
   border-radius: var(--border-radius-md);
   border: 0.0625rem solid var(--color-gray-20);
-  background-image: url(./../../icons/select-arrow.svg);
+  background-image: url(./../icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position-x: 97%;
   background-position-y: center;
