@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/main.js" type="module"></script>
 </head>
 
 <body>
-    <header class="header header--light container">
+    <header class="header container">
         <a href="index.html" class="header__logo logo">
             <img width="156" height="32" src="./images/logo-black.svg" alt="SkyTravel логотип">
         </a>
@@ -23,7 +23,7 @@
                     <a href="./index.html" class="header__menu-link">Главная</a>
                 </li>
                 <li class="header__menu-item">
-                    <a href="./destinations.html" class="header__menu-link is-active">Направления</a>
+                    <a href="./destinations.html" class="header__menu-link">Направления</a>
                 </li>
                 <li class="header__menu-item">
                     <a href="./services.html" class="header__menu-link">Услуги</a>
@@ -39,95 +39,73 @@
             <span class="burger__button-line"></span>
             <span class="burger__button-line"></span>
         </button>
+
     </header>
-
-
     <main>
-        <section class="destination">
-            <div class="destination-hero">
-                <img data-hero-img class="destination-hero__img" src="" alt="">
-            </div>
-
-            <div class="destination__back container">
-                <a href="./destinations.html" class="destination__back-link">
-                    <span><img src="./icons/destination/arrow-left.svg" alt=""></span>
-                    Вернуться ко всем направлениям
-                </a>
-            </div>
-
-
-            <div class="destination-content-wrapper container" aria-labelledby="destination-content-title">
-                <div class="destination-content__inner">
-                    <h1 data-title class="destination__title h2" id="destination-content-title"></h1>
-                    <div class="destination__raiting">
-                        <div data-stars class="destination__stars">
-                            <!-- тут будут span с классом destination__star -->
-                        </div>
-                        <div class="destination__reviews">
-                            <span data-raiting class="destination__reviews-total__raiting"></span>
-                            <span data-reviews class="destination__reviews-total__reviews"></span>
-                        </div>
+        <section class="terms" aria-labelledby="terms-title">
+            <div class="terms__hero">
+                <div class="terms__hero-inner container">
+                    <h1 class="terms__title" id="terms-title">Условия предоставления услуг</h1>
+                    <div class="terms__date">
+                        <p>Дата публикации: <time datetime="07-06-2025">07.06.2025</time></p>
                     </div>
-                    <div data-description class="destination__description"></div>
-
-                    <div data-tags class="destination__tags"></div>
-
-                    <div data-tabs class="destination__details"></div>
-
-                    <div class="destination__season-wrapper">
-                        <h2 data-season-title class="destination__season-table__title h3"></h2>
-
-                        <table data-season-table class="destination__season-table table"></table>
+                    <div class="terms__description">
+                        <p>Пожалуйста, внимательно ознакомьтесь с настоящими условиями перед использованием сайта и
+                            заказом туристических услуг. Использование сайта означает ваше согласие с приведёнными ниже
+                            условиями.</p>
                     </div>
                 </div>
-                <aside class="destination__sidebar">
-                    <div class="weather-card">
-                        <div class="weather-card__header">
-                            <div class="weather-card__title-block">
-                                <h3 class="weather-card__title h5">Текущая погода</h3>
-                                <time data-weather-date datetime="" class="weather-card__date"></time>
-                            </div>
-                            <div class="weather-card__temp-wrapper">
-                                <img data-weather-icon src="" alt=""
-                                    class="weather-card__icon weather-card__icon--large">
-                                <div class="weather-card__current-temp">
-                                    <span data-weather-temp class="weather-card__temp weather-card__temp--large"></span>
-                                    <span data-weather-desc></span>
-                                </div>
-                            </div>
-                            <div class="weather-card__indicators">
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Влажность</span>
-                                    <span data-weather-humidity class="weather-card__indicator-value"></span>
-                                </div>
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Ветер</span>
-                                    <span data-weather-wind class="weather-card__indicator-value"></span>
-                                </div>
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Уф-индекс</span>
-                                    <span data-weather-uv class="weather-card__indicator-value"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="weather-card__body">
-                            <h4 class="weather-card__body-title visually-hidden">Прогноз</h4>
-                            <ul data-weather-forecast class="weather-card__list" aria-label="Прогноз на неделю"></ul>
-                        </div>
-                    </div>
-                    <div class="facts-card">
-                        <h4 class="facts-card__title h5">Краткие факты</h4>
-                        <ul data-facts class="facts-card__list"></ul>
-                    </div>
-                    <div class="booking-promo">
-                        <h4 class="booking-promo__title h3">Готовы к путешествию?</h4>
-                        <div class="booking-promo__description">
-                            <p>Забронируйте тур сейчас и начните своё приключение!</p>
-                        </div>
-                        <a href="./contacts.html" class="booking-promo__botton button">Забронировать</a>
-                    </div>
-                </aside>
             </div>
+
+            <div class="termns__inner container">
+                <div class="terms__content">
+                    <ul class="terms__list">
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Общие положения</h2>
+                            <p>Сайт предоставляет информацию о туристических направлениях, а также возможность оставить
+                                заявку на получение услуги. Мы не являемся туроператором, а предоставляем информационную
+                                платформу.</p>
+                        </li>
+
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Ответственность</h2>
+                            <p>Мы стремимся к тому, чтобы вся информация на сайте была актуальной и достоверной. Однако
+                                мы не несем ответственности за возможные ошибки, а также за действия третьих лиц
+                                (туроператоров, агентств и пр.).</p>
+                        </li>
+
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Использование материалов сайта</h2>
+                            <p>Все материалы сайта защищены авторским правом. Копирование или использование информации
+                                возможно только с письменного согласия владельца сайта.</p>
+                        </li>
+
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Заказ и бронирование</h2>
+                            <p>Подача заявки на сайте не является моментальным бронированием. Мы свяжемся с вами для
+                                уточнения деталей. Точная стоимость, условия и сроки уточняются после обратной связи.
+                            </p>
+                        </li>
+
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Изменения условий</h2>
+                            <p>Мы оставляем за собой право вносить изменения в настоящие условия без предварительного
+                                уведомления. Актуальная версия всегда доступна на этой странице.</p>
+                        </li>
+
+                        <li class="terms__item">
+                            <h2 class="terms__subtitle">Обратная связь</h2>
+                            <p>По любым вопросам, связанным с использованием сайта или услугами, вы можете обратиться по
+                                почте
+                                <a href="mailto:example@email.com">example@email.com</a>
+                                или по телефону
+                                <a href="tel:+79991234567">7 (999) 123-45-67</a>.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
 
         <section class="cta " aria-labelledby="cta-title">

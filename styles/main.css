@@ -1900,4 +1900,88 @@ a[class] {
   font-size: 0.875rem;
 }
 
+.privacy p {
+  text-wrap: balance;
+}
+.privacy__hero {
+  padding-block: 4rem;
+  background-color: var(--color-section-bg);
+}
+.privacy__title, .privacy__date {
+  margin-bottom: 1rem;
+}
+@media (width <= 48.06125rem) {
+  .privacy__title {
+    font-size: 2.25rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .privacy__title {
+    font-size: 1.5rem;
+  }
+}
+.privacy__date {
+  font-size: 1rem;
+}
+.privacy__content {
+  padding-block: 4rem;
+  padding-inline: 1rem;
+}
+.privacy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: decimal;
+}
+.privacy__list li::marker {
+  font-size: 1.5rem;
+}
+.privacy__sublist {
+  list-style: disc;
+  margin-block: 0.75rem;
+}
+.privacy__subtitle {
+  margin-bottom: 0.75rem;
+}
+
+.terms p {
+  text-wrap: balance;
+}
+.terms__hero {
+  padding-block: 4rem;
+  background-color: var(--color-section-bg);
+}
+.terms__title, .terms__date {
+  margin-bottom: 1rem;
+}
+@media (width <= 48.06125rem) {
+  .terms__title {
+    font-size: 2.25rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .terms__title {
+    font-size: 1.5rem;
+  }
+}
+.terms__date {
+  font-size: 1rem;
+}
+.terms__content {
+  padding-block: 4rem;
+  padding-inline: 1rem;
+}
+.terms__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: decimal;
+}
+.terms__list li::marker {
+  font-size: 1.5rem;
+}
+.terms__subtitle {
+  margin-bottom: 0.75rem;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/main.js" type="module"></script>
 </head>
 
 <body>
-    <header class="header header--light container">
+    <header class="header container">
         <a href="index.html" class="header__logo logo">
             <img width="156" height="32" src="./images/logo-black.svg" alt="SkyTravel логотип">
         </a>
@@ -23,7 +23,7 @@
                     <a href="./index.html" class="header__menu-link">Главная</a>
                 </li>
                 <li class="header__menu-item">
-                    <a href="./destinations.html" class="header__menu-link is-active">Направления</a>
+                    <a href="./destinations.html" class="header__menu-link">Направления</a>
                 </li>
                 <li class="header__menu-item">
                     <a href="./services.html" class="header__menu-link">Услуги</a>
@@ -39,94 +39,92 @@
             <span class="burger__button-line"></span>
             <span class="burger__button-line"></span>
         </button>
+
     </header>
-
-
     <main>
-        <section class="destination">
-            <div class="destination-hero">
-                <img data-hero-img class="destination-hero__img" src="" alt="">
-            </div>
-
-            <div class="destination__back container">
-                <a href="./destinations.html" class="destination__back-link">
-                    <span><img src="./icons/destination/arrow-left.svg" alt=""></span>
-                    Вернуться ко всем направлениям
-                </a>
-            </div>
-
-
-            <div class="destination-content-wrapper container" aria-labelledby="destination-content-title">
-                <div class="destination-content__inner">
-                    <h1 data-title class="destination__title h2" id="destination-content-title"></h1>
-                    <div class="destination__raiting">
-                        <div data-stars class="destination__stars">
-                            <!-- тут будут span с классом destination__star -->
-                        </div>
-                        <div class="destination__reviews">
-                            <span data-raiting class="destination__reviews-total__raiting"></span>
-                            <span data-reviews class="destination__reviews-total__reviews"></span>
-                        </div>
+        <section class="privacy" aria-labelledby="privacy-title">
+            <div class="privacy__hero">
+                <div class="privacy__hero-inner container">
+                    <h1 class="privacy__title" id="privacy-title">Политика конфиденциальности</h1>
+                    <div class="privacy__date">
+                        <p>Дата публикации: <time datetime="07-06-2025">07.06.2025</time></p>
                     </div>
-                    <div data-description class="destination__description"></div>
-
-                    <div data-tags class="destination__tags"></div>
-
-                    <div data-tabs class="destination__details"></div>
-
-                    <div class="destination__season-wrapper">
-                        <h2 data-season-title class="destination__season-table__title h3"></h2>
-
-                        <table data-season-table class="destination__season-table table"></table>
+                    <div class="privacy__description">
+                        <p>Мы уважаем вашу конфиденциальность и заботимся о защите персональной информации, которую вы
+                            можете предоставить при использовании нашего сайта.</p>
                     </div>
                 </div>
-                <aside class="destination__sidebar">
-                    <div class="weather-card">
-                        <div class="weather-card__header">
-                            <div class="weather-card__title-block">
-                                <h3 class="weather-card__title h5">Текущая погода</h3>
-                                <time data-weather-date datetime="" class="weather-card__date"></time>
+            </div>
+
+            <div class="privacy__inner container">
+                <div class="privacy__content">
+                    <ul class="privacy__list">
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Какие данные мы собираем</h2>
+                            <p>Мы не собираем персональные данные без вашего согласия. При посещении сайта может
+                                автоматически
+                                собираться техническая информация, включая IP-адрес, тип устройства и браузера, а также
+                                данные о
+                                просмотренных страницах. Если вы оставляете заявку или заполняете форму, вы можете
+                                указать имя,
+                                электронную почту или номер телефона.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Как мы используем данные</h2>
+                            <div class="privacy__subtitle-description">
+                                <p>Полученные данные используются исключительно для:</p>
                             </div>
-                            <div class="weather-card__temp-wrapper">
-                                <img data-weather-icon src="" alt=""
-                                    class="weather-card__icon weather-card__icon--large">
-                                <div class="weather-card__current-temp">
-                                    <span data-weather-temp class="weather-card__temp weather-card__temp--large"></span>
-                                    <span data-weather-desc></span>
-                                </div>
-                            </div>
-                            <div class="weather-card__indicators">
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Влажность</span>
-                                    <span data-weather-humidity class="weather-card__indicator-value"></span>
-                                </div>
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Ветер</span>
-                                    <span data-weather-wind class="weather-card__indicator-value"></span>
-                                </div>
-                                <div class="weather-card__indicator">
-                                    <span class="weather-card__indicator-name">Уф-индекс</span>
-                                    <span data-weather-uv class="weather-card__indicator-value"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="weather-card__body">
-                            <h4 class="weather-card__body-title visually-hidden">Прогноз</h4>
-                            <ul data-weather-forecast class="weather-card__list" aria-label="Прогноз на неделю"></ul>
-                        </div>
-                    </div>
-                    <div class="facts-card">
-                        <h4 class="facts-card__title h5">Краткие факты</h4>
-                        <ul data-facts class="facts-card__list"></ul>
-                    </div>
-                    <div class="booking-promo">
-                        <h4 class="booking-promo__title h3">Готовы к путешествию?</h4>
-                        <div class="booking-promo__description">
-                            <p>Забронируйте тур сейчас и начните своё приключение!</p>
-                        </div>
-                        <a href="./contacts.html" class="booking-promo__botton button">Забронировать</a>
-                    </div>
-                </aside>
+                            <ul class="privacy__sublist">
+                                <li>ответов на ваши обращения;</li>
+                                <li>улучшения качества сайта;</li>
+                                <li>анализа посещаемости с помощью аналитических систем.</li>
+                            </ul>
+                            <p>Мы не передаём ваши данные третьим лицам, за исключением случаев, предусмотренных
+                                законом.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Файлы cookie</h2>
+                            <p>Сайт может использовать cookie-файлы для улучшения пользовательского опыта. Вы можете
+                                отключить
+                                их в настройках браузера. Это может повлиять на функциональность сайта.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Хранение и защита информации</h2>
+                            <p>Мы применяем технические и организационные меры для защиты вашей информации от
+                                несанкционированного
+                                доступа. Все данные обрабатываются безопасно и в соответствии с действующим
+                                законодательством.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Ссылки на другие сайты</h2>
+                            <p>Наш сайт может содержать ссылки на сторонние ресурсы. Мы не несём ответственности за
+                                политику
+                                конфиденциальности этих сайтов.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Изменения политики</h2>
+                            <p>Мы можем вносить изменения в политику конфиденциальности. Актуальная версия всегда
+                                доступна на этой
+                                странице. Просим периодически проверять информацию на предмет обновлений.</p>
+                        </li>
+
+                        <li class="privacy__item">
+                            <h2 class="privacy__subtitle">Контакты</h2>
+                            <p>Если у вас возникли вопросы по поводу обработки персональных данных, вы можете связаться
+                                с нами по
+                                электронной почте <a href="mailto:info@mail.ru">info@mail.ru</a> или по
+                                телефону
+                                <a href="tel:+79991234567">7 (999) 123-45-67</a>.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 

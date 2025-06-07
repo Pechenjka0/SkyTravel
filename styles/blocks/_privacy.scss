@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.privacy {
+    p {
+        text-wrap: balance;
+    }
+
+    &__hero {
+        padding-block: rem(64);
+        background-color: var(--color-section-bg);
+    }
+
+    &__title,
+    &__date {
+        margin-bottom: rem(16);
+    }
+
+    &__title {
+        @include mobile {
+            font-size: rem(36);
+        }
+
+        @include mobile-s {
+            font-size: rem(24);
+        }
+    }
+
+    &__date {
+        font-size: rem(16);
+    }
+
+    &__content {
+        padding-block: rem(64);
+        padding-inline: rem(16);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        list-style: decimal;
+
+        li::marker {
+            font-size: rem(24);
+        }
+    }
+
+    &__sublist {
+        list-style: disc;
+        margin-block: rem(12);
+    }
+
+    &__subtitle {
+        margin-bottom: rem(12);
+    }
+}
