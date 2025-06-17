@@ -116,7 +116,7 @@ export async function loadDestination() {
 
   // Погода
   async function loadWeather(cityName) {
-    const API_KEY = '38546536bc4c43f6a67164213250306';
+    const API_KEY = '0dbea1f3c4e540df8a653556251706';
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${encodeURIComponent(cityName)}&days=6&aqi=no&alerts=no&lang=ru`;
 
     try {
