@@ -108,7 +108,7 @@
 
         </section>
 
-        <section class="cta " aria-labelledby="cta-title">
+        <section class="cta" aria-labelledby="cta-title">
             <div class="cta__inner container">
                 <h2 class="cta__title" id="cta-title">Подпишитесь на нашу рассылку новостей</h2>
                 <div class="cta__description">
@@ -116,7 +116,7 @@
                         и эксклюзивных предложений.</p>
                 </div>
                 <div class="cta__content">
-                    <form class="cta__form" action="#" method="post">
+                    <form class="cta__form" action="#" method="post" data-subscribe-form>
                         <input type="email" class="cta__input" name="email" placeholder="Info@mail.ru" required />
                         <button type="submit" class="cta__button button">Подписаться</button>
                     </form>
@@ -128,6 +128,12 @@
                 </div>
             </div>
         </section>
+
+        <div class="cta__message-wrapper">
+            <div class="cta__subscribe-message" data-subscribe-message>
+                Вы успешно подписались на рассылку
+            </div>
+        </div>
     </main>
 
     <footer class="footer">

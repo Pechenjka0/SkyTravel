@@ -65,7 +65,27 @@
 
             &:hover {
                 opacity: .7;
-            } 
+            }
         }
+    }
+
+    &__message-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__subscribe-message {
+        position: fixed;
+        bottom: rem(20);
+        background: var(--color-valid);
+        color: var(--color-light);
+        padding: rem(12) rem(24);
+        margin-inline: rem(12);
+        border-radius: var(--border-radius-sm);
+        display: none;
+        font-size: rem(16);
+        z-index: 1000;
+        text-align: center;
+        text-wrap: balance;
     }
 }

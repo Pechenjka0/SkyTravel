@@ -11,14 +11,16 @@ export function setupSearchFilter() {
         let visibleCount = 0;
 
         cards.forEach(card => {
-            const title = card.dataset.title.toLowerCase();
-            const region = card.dataset.region.toLowerCase();
-            const tags = card.dataset.tags.toLowerCase();
+            const title = card.dataset.title?.toLowerCase() || '';
+            const region = card.dataset.region?.toLowerCase() || '';
+            const tags = card.dataset.tags?.toLowerCase() || '';
+            const city = card.dataset.city?.toLowerCase() || ''; // <--- вот это добавляем
 
             const matches =
                 title.includes(query) ||
                 region.includes(query) ||
-                tags.includes(query);
+                tags.includes(query) ||
+                city.includes(query); // <--- и сюда
 
             card.style.display = matches ? '' : 'none';
             if (matches) visibleCount++;
@@ -33,6 +35,14 @@ export function setupSearchFilter() {
         // Показываем сообщение если ничего не найдено
         if (emptyMessage) {
             emptyMessage.hidden = visibleCount > 0;
+        }
+    });
+
+
+    window.addEventListener('pageshow', () => {
+        const searchInput = document.querySelector('[data-search-input]');
+        if (searchInput) {
+            searchInput.value = '';
         }
     });
 }

@@ -8,6 +8,9 @@ import { setupActiveThemeTags } from './themeTags.js';
 import { setupSelectFilters } from './selectFilters.js';
 import { setupFiltersApply } from './filterCards.js';
 import { setupSearchFilter } from './searchFilter.js';
+import { setupSubscribeForm } from './subscribeMessage.js';
+
+setupSubscribeForm();
 
 document.addEventListener('DOMContentLoaded', function () {
     initSlider();
@@ -19,5 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setupSelectFilters();
     setupFiltersApply();
     setupSearchFilter();
+    // setupSubscribeForm();
 });
 

@@ -240,6 +240,7 @@ svg * {
   --color-gray-10: #D1D5DB;
   --color-gray-20: #BDBDBD;
   --color-gray-30: #707280;
+  --color-valid: #4caf50;
   --color-placeholder: #4A4A4A70;
   --color-europe-text: #1E40AF;
   --color-europe-bg: #DBEAFE;
@@ -1212,6 +1213,24 @@ a[class] {
 }
 .cta__note a:hover {
   opacity: 0.7;
+}
+.cta__message-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.cta__subscribe-message {
+  position: fixed;
+  bottom: 1.25rem;
+  background: var(--color-valid);
+  color: var(--color-light);
+  padding: 0.75rem 1.5rem;
+  margin-inline: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  display: none;
+  font-size: 1rem;
+  z-index: 1000;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .footer {
