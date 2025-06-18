@@ -1140,6 +1140,24 @@ a[class] {
 .contact-form__button {
   border: 0;
 }
+.contact-form__message {
+  position: fixed;
+  bottom: 1.25rem;
+  background: var(--color-valid);
+  color: var(--color-light);
+  padding: 0.75rem 1.5rem;
+  margin-inline: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  display: none;
+  font-size: 1rem;
+  z-index: 1000;
+  text-align: center;
+  text-wrap: balance;
+}
+.contact-form__message-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .contact-form__checkbox-input:checked + .contact-form__checkbox-custom::after {
   content: "";

@@ -9,8 +9,10 @@ import { setupSelectFilters } from './selectFilters.js';
 import { setupFiltersApply } from './filterCards.js';
 import { setupSearchFilter } from './searchFilter.js';
 import { setupSubscribeForm } from './subscribeMessage.js';
+import { setupContactFormMessage } from './contactFormMessage.js';
 
 setupSubscribeForm();
+setupContactFormMessage();
 
 document.addEventListener('DOMContentLoaded', function () {
     initSlider();
@@ -22,6 +24,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setupSelectFilters();
     setupFiltersApply();
     setupSearchFilter();
-    // setupSubscribeForm();
 });
 
