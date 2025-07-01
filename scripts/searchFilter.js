@@ -14,13 +14,13 @@ export function setupSearchFilter() {
             const title = card.dataset.title?.toLowerCase() || '';
             const region = card.dataset.region?.toLowerCase() || '';
             const tags = card.dataset.tags?.toLowerCase() || '';
-            const city = card.dataset.city?.toLowerCase() || ''; // <--- вот это добавляем
+            const city = card.dataset.city?.toLowerCase() || '';
 
             const matches =
                 title.includes(query) ||
                 region.includes(query) ||
                 tags.includes(query) ||
-                city.includes(query); // <--- и сюда
+                city.includes(query);
 
             card.style.display = matches ? '' : 'none';
             if (matches) visibleCount++;

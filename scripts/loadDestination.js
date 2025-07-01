@@ -1,5 +1,3 @@
-// scripts/modules/loadDestination.js
-
 export async function loadDestination() {
   const response = await fetch('./data/tours.json');
   const tours = await response.json();
